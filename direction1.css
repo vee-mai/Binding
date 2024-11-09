@@ -1,0 +1,37 @@
+
+/* font-face */
+	font-family: Inter;
+
+:root{
+	--main-font-family:Inter;
+	--font-size:14px;
+	--line-height:1.5;
+
+	/* colors */
+	--color:black;
+	--inverse-bg-color:white;
+	--text-color:white;
+}
+body{
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	font-family: var(--main-font-family);
+	font-size: var(--font-size);
+	line-height: var(--line-height);
+	}
+
+/* mobile media query  */
+@media (min-width:400px){
+	:root {
+		--padding: 2rem;
+	}
+
+	body{
+		margin:auto;
+		background-color: var(--bg-color)
+	}
+
+	li{
+		border:2px color:pink;
+	}
+
