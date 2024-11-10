@@ -1,24 +1,132 @@
 
 /* font-face */
-	font-family: Inter;
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet"');
 
 :root{
-	--main-font-family:Inter;
-	--font-size:14px;
+	--font-size:16px;
+	--hero-heading-font:'Poppins', sans-serif;
+	--main-font-family:'Poppins', sans-serif;
 	--line-height:1.5;
-
-	/* colors */
-	--color:black;
-	--inverse-bg-color:white;
-	--text-color:white;
+	--spacing:20px;
 }
+
+/* general styles */
 body{
-	background-color: var(--bg-color);
-	color: var(--text-color);
-	font-family: var(--main-font-family);
-	font-size: var(--font-size);
-	line-height: var(--line-height);
+	background-color: black;
+	color: black;
+}
+	/* headings */
+	h1{
+		font-family:'poppins', sans-serif;
+		font-size:2rem;
+		font-weight:bolder;
+		color:white;
 	}
+
+	h2{
+		font-family:'poppins', sans-serif;
+		font-size:30px;
+		max-width:35rem;
+		font-weight:bold;
+	}
+
+.intro{
+	color:white;
+	padding-bottom:5rem;
+}
+
+nav{
+	position:sticky;
+	top:0;
+	font-family:'poppins';
+	font-weight:500px;
+	line-height: 50px;
+	background-color: white;
+	color:black;
+	margin-left;
+	z-index:1; 
+}
+
+.left-nav{
+	display:inline;
+	margin-left:1.5rem;
+}
+
+.right-nav{
+	display:inline;
+	float:right;
+	margin-right:1.5rem;
+	background-color:white;
+	color:black;
+}
+
+.dropdown{
+	position:relative;
+	display:inline-block;
+}
+
+.dropdown-content a:first-child:hover{
+	background-color:greenyellow;
+}
+
+input[type=checkbox]{
+	display:none;
+}
+
+input[type=checkbox]: checked ~ .dropdown-content{
+	display:block;
+}
+
+.dropdown-content a{
+	display: block;
+}
+
+nav a:not(.dropdown a):hover{
+	opacity:50%;
+}
+
+
+header{
+	background-color: black;
+	padding:3rem;
+}
+
+/* cards */
+.cards{
+	display: flex;
+	flex-direction:row;
+	gap:1rem;
+	padding-bottom:20rem;
+}
+
+.card-1, .card-2, .card-3{
+	position:relative;
+	border-radius:0.5rem;
+	min-width:18rem;
+	max-width:100vh;
+}
+
+.card-content{
+	padding-top:70px;
+	padding-left:30px;
+	padding-bottom:30px;
+}
+
+.card-1{
+	background:greenyellow;
+}
+
+.card-2{
+	background:rgb(255, 47, 193);
+}
+
+.card-3{
+	background:rgb(153, 153, 252);
+}
+
+footer{
+	
+}
 
 /* mobile media query  */
 @media (min-width:400px){
@@ -31,7 +139,59 @@ body{
 		background-color: var(--bg-color)
 	}
 
-	li{
-		border:2px color:pink;
+	.cards{
+		display: flex;
+		flex-direction:column;
+	}
+	.card-content{
+		padding-left:1.5rem;
+		padding-right:1.5rem;
+		padding-bottom:1.3rem;
 	}
 
+	.dropdown-content
+}
+
+footer{
+	color:white;
+}
+@media (min-width:1000px){
+	h1{
+		font-family:'poppins', sans-serif;
+		font-weight:bolder;
+		font-size:50px;
+		max-width:50reml
+	}
+	.cards{
+		flex-direction:row;
+		gap:2rem;
+		padding-top:10rem;
+	}
+	.dropdown-button:hover{
+		cursor: pointer;
+		opacity:50%;
+	}
+
+	.left-nav{
+		display:inline;
+		margin-left:1.5rem;
+	}
+	
+	.right-nav{
+		display:inline;
+		float:right;
+		margin-right:1.5rem;
+		background-color:white;
+		color:black;
+	}
+	.dropdown-content a{
+		color:black;
+		display:block;
+	}
+
+	.dropdown-content a:hover {background-color:greenyellow}
+
+	.dropdown:hover .dropdown-content{
+		display: block;
+	}
+}
