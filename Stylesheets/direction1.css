@@ -102,7 +102,7 @@ nav a:not(.dropdown a):hover{
 	position:relative;
 	border-radius:0.5rem;
 	min-width:18rem;
-	max-width:100vh;
+	max-width: none;
 }
 
 .card-content{
@@ -158,11 +158,13 @@ nav a:not(.dropdown a):hover{
 footer{
 	color:white;
 }
-@media (min-width:700px){
+@media (min-width:950px){
 
 	.cards{
-		display:flex;
-		flex-direction:column;	
+		display:grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		/* flex-direction:column;	 */
+		justify-content: space-between;
 	}
 
 
@@ -188,7 +190,7 @@ footer{
 	}
 	.intro{
 		font-size:1.2rem;
-		line-height:1.5rem;
+		line-height:1.5rem; em
 		padding-right:30rem;
 	}
 
