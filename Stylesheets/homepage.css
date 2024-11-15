@@ -174,9 +174,7 @@ animation:
 .cardlink:nth-child(1){
 	background-color:greenyellow;
 }
-.cardlink:nth-child(2){
-	background-color:blue;
-}
+
 
 .cardlink-item1{
 	grid-row:1;
