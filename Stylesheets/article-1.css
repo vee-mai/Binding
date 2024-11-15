@@ -1,14 +1,15 @@
 /*general*/
+*{
+	background-color:black;
+	color:white;
+}
 body{
 	font-family: "Inter", sans-serif;
-	font-size: 18px;
-	font-weight: 260;
 	padding-left: 100px;
 	padding-top:5px;
 	text-align: start;
-	line-height:30px;
-	background-color:white;
 }
+
 
 em{
 	font-style: italic;
@@ -16,6 +17,7 @@ em{
 
 /*paragraph styles*/
 p{
+	line: height 1.6;
 	text-indent:40px;	
 }
 
@@ -76,20 +78,13 @@ footer{
 }
 
 #author-name{
+	font-size:1.5rem;
 	margin-top:100px;
 	margin-left:-10px;
 	margin-bottom:20px;
-	border-bottom: 4px solid #000000;
 	margin-right:100px;
 }
 
-#article-name{
-	margin-left:-43px;
-	font-size: 40px;
-	font-weight:bold;
-	margin-bottom:20px;
-	padding-left: 30px;
-}
 
 #article-date{
 	margin-bottom:50px;	
@@ -105,11 +100,15 @@ footer{
 	line-height: 50px;
 }
 
-.reading-response-title{
-	border-bottom: 4px solid #000000;
-	margin-top:50px;
-	margin-bottom:50px;
-	margin-right:100px;	
+.author-box{
+	background-color:black;
+	color:white;
+	outline-style:solid;
+	outline-color: white;
+	border-radius: 5px;
+	font-family:'Space Grotesk', serif;
+	line-height:1.7rem;
+	padding:1.5rem;
 }
 
 /*article-and-reading-response-styles*/
@@ -224,6 +223,7 @@ footer{
 }
 
 #title-art> .letter:nth-child(7){
+	font-size:4rem;
 	top:350px;
-	left:400px;
+	left:25rem;
 }
