@@ -34,6 +34,8 @@ p{
 	margin-left:1.5rem;
 	margin-right:0.6rem;
 }
+
+/* header */
 .header{
 	font-family:var(--font-family);
 	font-size:var(--nav-font-size);
@@ -42,6 +44,12 @@ p{
 	justify-content:space-between;
 	flex-direction:row;
 	text-transform: uppercase;
+}
+/* inside header */
+.project{
+	font-weight:bolder;
+	color:#0e8daf;
+	text-decoration:underline;
 }
 
 /* NAV BAR */
@@ -72,9 +80,11 @@ p{
 	flex-direction:row;
 	font-family:"nunito",sans-serif;
 }
+
+/* table content */
 details{ 
 	margin:1rem;
-	background-color:#121212;
+	background-color:#0e8daf;
 	color:white;
 	padding:1rem;
 	border-radius:5px;
