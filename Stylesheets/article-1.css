@@ -22,6 +22,17 @@ h1{
 	color:#121212;
 	margin:1.5rem;
 }
+h2{
+	background-color:white;
+	padding:1.2rem;
+	border-radius:5px;
+	outline-style:solid;
+	outline-color:#121212;
+
+.sticky-header{
+	position:sticky;
+}
+}
 
 .heading-art{
 	font-family:'Space Grotesk', serif;
@@ -33,6 +44,7 @@ p{
 	line-height:1.8rem;
 	margin-left:1.5rem;
 	margin-right:0.6rem;
+	
 }
 
 /* header */
@@ -90,13 +102,20 @@ details{
 	border-radius:5px;
 	font-family: 'Space Grotesk', serif;
 	margin:1.5rem;
+	height: 1.5rem;
 } 
 
 blockquote{
 	background-color:white;
-	padding:0.3rem;
+	/* padding:0.3rem; */
 	border-left:8px solid rgba(218, 102, 123, 1);
 	border-radius:5px;
+	max-width:45rem;
+}
+
+.quotes {
+	padding-top: 0;
+
 }
 
 blockquote:hover{
@@ -125,11 +144,21 @@ blockquote:hover .quote-popup{
 @media (min-width:650px){
 	h1{
 		font-size:9.5rem;
-		line-height:9rem;
+		line-height:9rem;	
 	}
 	details{
 		max-width:20rem;
 		margin-top:0rem;
 		}
+
+	aside{
+		display: flex;
+		flex-direction:row;
+		margin-top:3rem;
+	}
 	
 	@media (min-width:1024px){
+p{
+	margin:2rem;
+	max-width:40rem;
+}
