@@ -93,6 +93,9 @@ p{
 	font-family:"nunito",sans-serif;
 }
 
+.layout{
+	display:flex;
+}
 /* table content */
 details{ 
 	margin:1rem;
@@ -132,7 +135,7 @@ blockquote p{
 }
 
 blockquote p:hover{
-	background-color:#white;
+	background-color:white;
 	color:black;
 	rotate:2deg;
 }
@@ -149,16 +152,17 @@ blockquote:hover .quote-popup{
 	details{
 		max-width:20rem;
 		margin-top:0rem;
-		}
+	}
 
 	aside{
 		display: flex;
 		flex-direction:row;
-		margin-top:3rem;
 	}
+}
 	
 	@media (min-width:1024px){
 p{
 	margin:2rem;
 	max-width:40rem;
+}
 }
