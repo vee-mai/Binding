@@ -95,6 +95,7 @@ p{
 
 .layout{
 	display:flex;
+	display:column;
 }
 /* table content */
 details{ 
@@ -144,25 +145,65 @@ blockquote:hover .quote-popup{
 	background-color:black;
 }
 
+.button-one {
+		background-color: white; 
+		color: black; 
+		border: 2px solid #04AA6D;
+	}
+	
+	.button-one:hover {
+		background-color: #04AA6D;
+		color: white;
+	}
+
+.sticky-aside {
+	background-color: white;
+	color: black;
+	position: sticky;
+	max-width: 20rem;
+	margin-left: 2rem;
+	margin-right: 2rem;
+	padding-bottom: 1.5rem;
+	border-radius: 1rem;
+	border: solid 1px black;
+}
+
+
 @media (min-width:650px){
 	h1{
 		font-size:9.5rem;
 		line-height:9rem;	
 	}
-	details{
-		max-width:20rem;
-		margin-top:0rem;
-	}
+	
 
-	aside{
+	/* aside{
 		display: flex;
 		flex-direction:row;
-	}
+	} */
 }
 	
-	@media (min-width:1024px){
+@media (min-width:1024px){
+
+h1{
+	font-size:9.5rem;
+	line-height:9rem;	
+	border-bottom:8rem;
+}
+
 p{
 	margin:2rem;
 	max-width:40rem;
+}
+
+.sticky-aside {
+	background-color: white;
+	color: black;
+	position: sticky;
+	max-width: 20rem;
+	margin-left: 3rem;
+	margin-right: 2rem;
+	padding-bottom: 1.5rem;
+	border-radius: 1rem;
+	border: solid 1px black;
 }
 }
