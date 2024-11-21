@@ -30,10 +30,40 @@ h1{
 
 h2{
 	font-family:var(--font-family);
+	font-weight:bold;
 }
 
 header{
 	background-color: beige;
-	padding-left:3rem;
 }
 
+
+@media (min-width:1024px){
+
+	h1{
+		font-size:9.5rem;
+		line-height:9rem;	
+		border-bottom:8rem;
+	}
+	
+	p{
+		margin:2rem;
+		max-width:40rem;
+	}
+	
+	.sticky-aside {
+		background-color: white;
+		color: black;
+		position: sticky;
+		max-width: 20rem;
+		margin-left: 3rem;
+		margin-right: 3rem;
+		border-radius:1rem;
+		border: solid 1px black;
+	}
+	
+	.layout{
+		display:flex;
+		flex-direction:row;
+	}
+	}
