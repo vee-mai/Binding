@@ -33,8 +33,7 @@ h1{
 
 h2{
 	background-color:white;
-	padding-top:1.2rem;
-	padding-bottom:1.2rem;
+	padding:1.2rem;
 	border-radius:5px;
 	outline-style:solid;
 	outline-color:#121212;
@@ -85,9 +84,9 @@ p{
 .table_of_content{
 	padding-bottom:1.5rem;
 }
-.sticky-header #section1{
+.sticky-header, #section1{
 	position:sticky;
-	top:10px;
+	top:2.5rem;
 }
 
 .article-info{
@@ -242,6 +241,7 @@ blockquote:hover .quote-popup{
 .sticky-aside {
 	background-color: white;
 	color: black;
+	box-shadow: 0px 0px 0px 0px #04AA6D, 6px 6px 0px 0px #04AA6D;
 	position: sticky;
 	max-width: 20rem;
 	margin-left: 2rem;
@@ -320,7 +320,7 @@ aside {
 
 .sticky-aside {
 	position: sticky;
-	top: 1rem;
+	top: 2.5rem;
 
 }
 
@@ -348,7 +348,7 @@ article {
 	background-color: #04AA6D;
 	color: white;
 }
-}
+
 
 #hover-title:hover{
 	color: #04AA6D;
@@ -359,6 +359,11 @@ article {
 
 #intro{
 	position:sticky;
+}
+
+#intro > p {
+	margin-top: 0;
+	padding-top: 0;
 }
 
 a{
@@ -375,5 +380,9 @@ a:hover{
 #section1:hover{
 	color:red;
 }
+
+.sticky-header {
+	max-width: 46rem;
+	margin: auto;
 }
 }
