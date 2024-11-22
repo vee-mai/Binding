@@ -1,35 +1,77 @@
-
-/* typefaces */
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk&display=swap');
 
-/* paragraph-fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-
-@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
-
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Grotesk&display=swap');
 
 :root{
 	/* colors */
 	--background-color:beige;
 	--text-color:#121212;
+	--primary-color:#04AA6D;
+	--secondary-color:white;
+	--accent-color:rgb(142, 142, 142);
+
 
 	/* typefaces */
-	--font-family:"Space Grotesk",serif;
-	--nav-font-size:1rem;
-	--h1-font-size:1rem;
+	--font-family-primary:"Space Grotesk",serif;
+	--font-family-secondary:"Roboto Mono",monospace;
+
+	--font-size-h1: 5rem;
+	--font-size-h2: 2rem;
+	--font-size-h3: 1rem;
+	--font-size-h4: 1rem;
+	--font-size-p: 1rem;
+	--font-size-nav: 1rem;
+
+	--font-weight-regular: 400;
+	--font-weight-bold: 800;
+	--font-weight-bolder: bolder;
+
+	/* spacing */
+	--spacing-xs: 0.3rem;
+	--spacing-sm: 0.5rem;
+	--spacing-md: 1rem;
+	--spacing-lg: 1.5rem;
+	--spacing-xl: 2rem;
+	--spacing-xxl: 3rem;
+
+	/* border radius */
+	--border-radius: 0.5rem;
+
+	/* outline */
+	--outline-color: #121212;
+	--outline-style: solid;
+
+	/* max Widths */
+	--max-width-content: 48rem;
+	--max-width-section: 60rem;
+
+	/* shadow */
+	 --box-shadow-primary: 0px 0px 0px 0px #04AA6D, 6px 6px 0px 0px #04AA6D;
+	--box-shadow-hover: 0px 0px 5px rgba(0, 0, 0, 0.2);
+
+	/* button styles */
+	 --button-padding: 0.5rem 0.8rem;
+	--button-border: 2px solid #000000;
+
+	/* layout */
+	--layout-gutter: 1.5rem;
+	--layout-grid-column-gap: 1.5rem;
+	--layout-grid-row-gap: 1rem;
+
+	/* sticky Position */
+	--sticky-top: 2.5rem;
+
+	/* Z-Index */
+	 --z-index-header: 1;
 }
 
 body{
 	background-color: var(--background-color);
 }
 
-h1{
-	font-family:var(--font-family);
-	Color:var(--text-color)
-}
 
 h2{
-	font-family:var(--font-family);
+	font-family:var(--font-family-secondary);
 	font-weight:bold;
 }
 
