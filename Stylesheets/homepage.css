@@ -1,20 +1,21 @@
 
 :root{
-	--font-family:'Space Grotesk', serif;
+	--font-family-homepage:'Space Grotesk', serif;
 	--font-paragraph:font-family: "Roboto Mono", monospace;
+
+	/* font sizes */
 	--h1:font-size:5rem;
+
+	/* colors */
 	--background-color:beige;
+	--text-color:#121212;
 }
 
 
 /* general styles */
-*{
-	background-color: var(--background-color);
-}
-
 body{
 	background-color: var(--background-color);
-	color: black;
+	color: var(--text-color);
 	margin:auto;
 }
 
@@ -24,7 +25,7 @@ h1{
 }
 
 h2{
-	font-size:30px;
+	font-size:1.5rem;
 	max-width:35rem;
 	font-weight:bold;
 }
@@ -41,6 +42,19 @@ nav{
 	z-index:1; 
 	padding-left:1.5rem;
 	padding-right:1.5rem;
+}
+
+.intro{
+	font-family:"Roboto Mono", monospace;
+	font-size:1.1rem;
+	line-height:2rem;
+	background-color:white;
+	color:#121212;
+	outline-style:solid;
+	outline-color:#121212;
+	border-radius:1rem;
+	padding:1rem;
+	margin:2rem;
 }
 
 .author{
@@ -100,15 +114,15 @@ nav{
 	display: block;
 }
 
-
+/* cardlink */
 .cardlink-container{
 	display:grid;
-	grid-template-rows: 1fr 1fr 1fr;
 	gap:2rem;
 	margin:auto;
 	padding:2rem;
 	background-color: beige;
 }
+
 .cardlink{
 	outline-style:solid;
 	outline-color: #121212;
@@ -119,10 +133,6 @@ nav{
 	background-color:white;
 	padding:0.5rem;
 	height:15rem;
-}
-
-.cardlink:nth-child(1){
-	background-color:beige;
 }
 
 
@@ -149,33 +159,6 @@ nav{
 } */
 
 /* cards */
-.cards{
-	display: flex;
-	flex-direction:row;
-	gap:1rem;
-	padding-bottom:20rem;
-}
-
-.card-1, .card-2, .card-3{
-	position:relative;
-	border-radius:0.5rem;
-	min-width:18rem;
-	max-width: none;
-}
-
-.card-content{
-	padding-top:70px;
-	padding-left:30px;
-	padding-bottom:30px;
-}
-	
-.cards{
-	display: flex;
-	flex-direction:column;
-	padding:2rem;
-	background-color:black;
-}
-
 .card-content{
 	padding-left:1.5rem;
 	padding-right:1.5rem;
@@ -195,17 +178,20 @@ footer{
 	}
 
 
-@media (min-width:1000px){
+@media (min-width:1280px){
 	
 	body{
-		background-color:black;
+		background-color:beige;
 	}
 	
 	h1{
 		font-family:"Space Grotesk", serif;
 		font-weight:bold;
 		font-size:8rem;
+		color:#121212;
 		padding-top:2rem;
+		padding-bottom:4rem;
+		margin-left:2rem;
 	}
 
 	h2{
@@ -213,6 +199,11 @@ footer{
 		font-size:1.5rem;
 		font: weight 800;
 		margin-left:2rem;	
+	}
+
+	h3{
+		font-family:var(--font-family-homepage);
+		font-size:2rem;
 	}
 	footer{
 		padding-left:3rem;
@@ -293,18 +284,42 @@ footer{
 		display:grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		gap:2rem;
-		margin:auto;
+		margin-bottom:4rem;
 		padding:2rem;
 	}
 
 	.cardlink{
-			width: 250px;
+			/* width: 250px; */
 			height: 250px;
 			background-color: rgba(255, 255, 255, 1);
 			color: #000;
 			border-radius: 10px;
+			/* box-shadow: 0px 0px 0px 2px rgba(218,102,123,1),
+		8px 8px 0px 0px rgba(218,102,123,1); */
+	}
+
+	#card1{
+		background-color: rgba(255, 255, 255, 1);
+			color: #000;
+		border-radius: 10px;
 			box-shadow: 0px 0px 0px 2px rgba(218,102,123,1),
-		8px 8px 0px 0px rgba(218,102,123,1);
+			6px 6px 0px 0px rgba(218,102,123,1);
+	}
+
+	#card1:hover{
+		border-radius: 10px;
+			box-shadow: 0px 0px 0px 2px #04AA6D,
+			6px 6px 0px 0px #04AA6D;
+	}
+
+	#colophon{
+		background-color:white;
+		outline-style:solid;
+		outline-color:#121212;
+		border-radius:1rem;
+		margin:auto;
+		padding:2rem;
+		max-width:50rem;
 	}
 }
 
