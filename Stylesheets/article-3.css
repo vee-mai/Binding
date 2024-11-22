@@ -8,6 +8,7 @@
 	--text-color:#121212;
 	--Article1-primary-color:#04AA6D;
 	--Article2-primary-color:#0f17ac;
+	--article3-primary-color:#ac0f58;
 	--secondary-color:white;
 	--accent-color:rgb(142, 142, 142);
 
@@ -86,7 +87,7 @@ h1{
 }
 
 h2{
-	background-color:var(--primary-color);
+	background-color:var(--article3-primary-color);
 	color:var(--secondary-color);
 	padding: var(--spacing-md) var(--spacing-md);
 	border-radius:var(--border-radius);
@@ -303,7 +304,7 @@ details{
 
 
 #intro{
-	background-color:#0f17ac;
+	background-color:#ac0f58;
 	color: #ffffff;
 	outline-style:solid;
 	outline-color: 2px #121212;
@@ -435,8 +436,8 @@ a:hover{
 		color:#0f17ac;
 	}
 	
-	#intro{
-		background-color:#0f17ac;
+	.intro{
+		background-color:#ac0f58;
 		color: #ffffff;
 		outline-style:solid;
 		outline-color: 2px #121212;
@@ -492,3 +493,38 @@ a:hover{
 
 @media (min-width:1440px){
 }
+
+#question{
+	font-weight:bold;
+	color:rgba(218, 102, 123, 1);
+}
+
+.speech-bubble {
+	position: relative;
+	padding:1.2rem;
+	background: #fefefe;
+	outline-style:solid;
+	outline-color:rgb(22, 161, 231);
+	border-radius:0.5rem;
+	max-width:28rem;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 16px solid transparent;	
+	border-top-color: rgb(22, 161, 231);
+	border-bottom: 0;
+	margin-left: -16px;
+	margin-bottom: -16px;
+}
+
+.sticky-header{
+	color:#0f17ac;
+}
+
+	

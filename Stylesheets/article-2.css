@@ -6,8 +6,8 @@
 	/* colors */
 	--background-color:beige;
 	--text-color:#121212;
-	--Article1-primary-color:#04AA6D;
-	--Article2-primary-color:#0f17ac;
+	--article1-primary-color:#04AA6D;
+	--article2-primary-color:#1242d2;
 	--secondary-color:white;
 	--accent-color:rgb(142, 142, 142);
 
@@ -86,7 +86,7 @@ h1{
 }
 
 h2{
-	background-color:var(--primary-color);
+	background-color:var(--article2-primary-color);
 	color:var(--secondary-color);
 	padding: var(--spacing-md) var(--spacing-md);
 	border-radius:var(--border-radius);
