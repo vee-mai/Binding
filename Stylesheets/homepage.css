@@ -7,7 +7,7 @@
 	--h1:font-size:5rem;
 
 	/* colors */
-	--background-color:beige;
+	--background-color:rgb(250, 250, 238);
 	--text-color:#121212;
 }
 
@@ -36,7 +36,7 @@ nav{
 	font-family:'poppins';
 	font-weight:500px;
 	line-height: 50px;
-	background-color: beige;
+	background-color: rgb(250, 250, 238);
 	color:black;
 	margin-left;
 	z-index:1; 
@@ -120,7 +120,7 @@ nav{
 	gap:2rem;
 	margin:auto;
 	padding:2rem;
-	background-color: beige;
+	background-color: rgb(250, 250, 238);
 }
 
 .cardlink{
@@ -181,7 +181,7 @@ footer{
 @media (min-width:1280px){
 	
 	body{
-		background-color:beige;
+		background-color:rgb(250, 250, 238);
 	}
 	
 	h1{
@@ -291,9 +291,8 @@ footer{
 	.cardlink{
 			/* width: 250px; */
 			height: 250px;
-			background-color: rgba(255, 255, 255, 1);
-			color: #000;
-			border-radius: 10px;
+			color: #121212;
+			border-radius:10px;
 			/* box-shadow: 0px 0px 0px 2px rgba(218,102,123,1),
 		8px 8px 0px 0px rgba(218,102,123,1); */
 	}
@@ -302,15 +301,50 @@ footer{
 		background-color: rgba(255, 255, 255, 1);
 			color: #000;
 		border-radius: 10px;
-			box-shadow: 0px 0px 0px 2px rgba(218,102,123,1),
-			6px 6px 0px 0px rgba(218,102,123,1);
-	}
-
-	#card1:hover{
-		border-radius: 10px;
 			box-shadow: 0px 0px 0px 2px #04AA6D,
 			6px 6px 0px 0px #04AA6D;
 	}
+
+	#card1:hover{
+		background-color:#04AA6D;
+		color:white;
+	}
+
+	#card2{
+		background-color: rgba(255, 255, 255, 1);
+			color: #000;
+		border-radius: 10px;
+			box-shadow: 0px 0px 0px 2px #1242d2,
+			6px 6px 0px 0px #1242d2;
+	}
+
+	#card2:hover{
+		background-color:#1242d2;
+		color:white;
+	}
+
+	#card3{
+		background-color: rgba(255, 255, 255, 1);
+		color: #000;
+		border-radius: 10px;
+			box-shadow: 0px 0px 0px 2px #ac0f58,
+			6px 6px 0px 0px#ac0f58;
+	}
+
+	#card3:hover{
+		background-color:#ac0f58;
+		color:white;
+	}
+	
+	
+
+
+	
+
+
+
+
+
 
 	#colophon{
 		background-color:white;

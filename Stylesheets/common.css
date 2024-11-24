@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Grotesk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 
 :root{
 	/* colors */
-	--background-color:beige;
+	--background-color:rgb(241, 241, 227);
 	--text-color:#121212;
 	--primary-color:#04AA6D;
 	--secondary-color:white;
@@ -15,11 +16,12 @@
 	--font-family-primary:"Space Grotesk",serif;
 	--font-family-secondary:"Roboto Mono",monospace;
 
+	/* font-sizes */
 	--font-size-h1: 5rem;
 	--font-size-h2: 2rem;
 	--font-size-h3: 1rem;
 	--font-size-h4: 1rem;
-	--font-size-p: 1rem;
+	--font-size-p: 1.3rem;
 	--font-size-nav: 1rem;
 
 	--font-weight-regular: 400;
@@ -72,36 +74,36 @@ body{
 
 h2{
 	font-family:var(--font-family-secondary);
-	font-weight:bold;
+	font-weight:var(--font-weight-bold);
 }
 
 header{
-	background-color: beige;
+	background-color:var(--background-color);
 }
 
 
-@media (min-width:1024px){
-
-	h1{
-		font-size:9.5rem;
-		line-height:9rem;	
-		border-bottom:8rem;
-	}
+@media (min-width:1280px){
+	/* h1{
+		font-size:calc(var(--font-size-h1) * 1.9);
+		line-height:calc(var(--font-size-h1) * 1.8);	
+		border-bottom:calc(var(--spacing-xl) * 4);
+	} */
 	
 	p{
-		margin:2rem;
-		max-width</blockquote>:40rem;
+		margin:var(--spacing-xl);
+		max-width:40rem;
+		color:#121212;
 	}
 	
 	.sticky-aside {
-		background-color: white;
-		color: black;
+		background-color:var(--secondary-color);
+		color:var(--text-color);
 		position: sticky;
-		max-width: 20rem;
+		max-width:calc(var(--max-width-content) / 2);
 		margin-left: 3rem;
 		margin-right: 3rem;
 		border-radius:1rem;
-		border: solid 1px black;
+		border: solid 1px var(--secondary-color);
 	}
 	
 	.layout{
