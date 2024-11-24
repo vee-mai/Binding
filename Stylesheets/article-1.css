@@ -263,7 +263,7 @@ details{
 .quote:hover{
 	background-color:white;
 	padding:0.3rem;
-	border-left:8px #04AA6D;
+	border-left:8px #BDE662;
 	border-radius:0.5rem;
 	transition:0.5s;
 	rotate:2deg;
@@ -384,6 +384,12 @@ article {
 	margin-right: 2rem;
 }
 
+footer{
+	margin-bottom:5rem;
+	margin-left:31rem;
+	margin-top:5rem;
+}
+
 /* blockquote */
 	.bigger-quote{
 		font-family:var(--font-family-primary);
@@ -435,12 +441,22 @@ a{
 	color:#121212;
 }
 
-a:hover{
-	color:#04AA6D;
+h3 a:hover{
+	background-color:#BDE662;
 	font-size:1.15rem;
 	font-weight:bold;
-	text-decoration:underline;
-	content:"article";
+}
+
+h4 a:hover{
+	background-color:#BDE662;
+	font-size:1.15rem;
+	font-weight:bold;
+}
+
+h4 a:active{
+	background-color:#BDE662;
+	font-size:1.15rem;
+	font-weight:bold;
 }
 
 /* CLASS-stylings */
@@ -458,8 +474,9 @@ a:hover{
 }
 
 .big-text:hover{
+	font-family:var(--font-family-secondary);
 	font-size:1.2rem;
-	font-weight:bold;
+	font-weight:bolder;
 }
 
 }
@@ -529,12 +546,7 @@ a:hover{
 
 	/* next buttons */
 	#button {
-		margin-left: 30rem;
-	}
-
-
-	#button {
-		font-family:var(--font-family);
+		font-family:var(--font-family-primary);
 		font-size:1rem;
 		padding-top:0.5rem;
 		padding-bottom:0.5rem;
@@ -544,14 +556,13 @@ a:hover{
 		color: black; 
 		border: 2px solid #000000;
 		border-radius:0.5rem;
-		margin-left:68rem;
+		margin-left:72rem;
 	}
 
 	#button:hover {
-		font-family var(--font-family);
+		font-family var(--font-family-primary);
 		font-size:1rem;
 		background-color:#BDE662;
-		color:white; 
 		padding-top:0.5rem;
 		padding-bottom:0.5rem;
 		padding-left:0.8rem;
