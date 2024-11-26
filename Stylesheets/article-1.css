@@ -1,87 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-
-
 :root{
 	/* colors */
-	--background-color:rgb(250, 250, 238);
-	--text-color:#121212;
-	--primary-color:#BDE662;
-	--secondary-color:white;
-	--accent-color:rgb(142, 142, 142);
-
-
-	/* typefaces */
-	--font-family-primary:"Space Grotesk",serif;
-	--font-family-secondary:"Roboto Mono",monospace;
-
-	--font-size-h1: 5rem;
-	--font-size-h2: 2rem;
-	--font-size-h3: 1rem;
-	--font-size-h4: 1rem;
-	--font-size-p: 1rem;
-	--font-size-nav: 1rem;
-
-	--font-weight-regular: 400;
-	--font-weight-bold: 800;
-	--font-weight-bolder: bolder;
-
-	/* spacing */
-	--spacing-xs: 0.3rem;
-	--spacing-sm: 0.5rem;
-	--spacing-md: 1rem;
-	--spacing-lg: 1.5rem;
-	--spacing-xl: 2rem;
-	--spacing-xxl: 3rem;
-
-	/* border radius */
-	--border-radius: 0.5rem;
-
-	/* outline */
-	--outline-color: #121212;
-	--outline-style: solid;
-
-	/* max Widths */
-	--max-width-content: 48rem;
-	--max-width-section: 60rem;
-
-	/* shadow */
-	 --box-shadow-primary: 0px 0px 0px 0px #0BDE662, 6px 6px 0px 0px #BDE662;
-	--box-shadow-hover: 0px 0px 5px rgba(0, 0, 0, 0.2);
-
-	/* button styles */
-	 --button-padding: 0.5rem 0.8rem;
-	--button-border: 2px solid #000000;
-
-	/* layout */
-	--layout-gutter: 1.5rem;
-	--layout-grid-column-gap: 1.5rem;
-	--layout-grid-row-gap: 1rem;
-
-	/* sticky Position */
-	--sticky-top: 2.5rem;
-
-	/* Z-Index */
-	 --z-index-header: 1;
-}
+	--article01-primary-color:#BDE662;
 
 /* base styling */
-body{
-	background-color: var(--background-color);
-}
 
 aside{
-
 	padding-bottom:var(--spacing-xl);
 }
 
 header{
-	background-color:#BDE662;
-	outline-style:solid;
-	outline-color: black;
-	border-radius:0 0 2% 2% ;
+	background-color:var(--article01-primary-color);
 	padding-bottom:2rem;
 }
 
@@ -98,7 +26,7 @@ h1{
 }
 
 h2{
-	background-color:#BDE662;
+	background-color:var(--article01-primary-color);
 	color:var(--text-color);
 	padding: var(--spacing-md) var(--spacing-md);
 	border-radius:var(--border-radius);
@@ -576,4 +504,96 @@ h4 a:active{
 	#citation{
 		font-size:0.9rem;
 	}
+
+
+
+#extra-space{
+	padding-top:20rem;
+}
+
+/* apple space modified from https://codepen.io/hb1/pen/LVELdJ */
+
+.shape {
+	margin-left:5rem;
+	margin-top:7rem;
+	margin-bottom:2rem;
+	max-width:2rem;
+}
+
+.apple{
+	background: black;
+	width: 13rem;
+	height: 12.37rem;
+	position: absolute;
+	border-radius: 35% 35% 41% 41% / 42% 42% 75% 75%;
+}
+
+.apple:before {
+	background:#121212;
+	content: "";
+	width: 55px;
+	height: 55px;
+	position: absolute;
+	margin: -51px 0 0 100px;
+	border-radius: 100px 0;
+	z-index: 5;
+}
+
+.apple:after {
+	background:rgb(250, 250, 238);
+	content: "";
+	width: 5.6rem;
+	height: 5.6rem;
+	position: absolute;
+	margin: 1.75rem 0 0 10.87rem;
+	border-radius: 50%;
+	transform: rotate (-53deg);
+	z-index: 4;
+	box-shadow: -7.9rem -109.5px 0 #fafaee, -7.37rem -6.68rem 0 #f5fffa, -115.5px -102.5px 0 #fafaee, -6.59rem -7.21rem #f5fffa, -105px -6.84rem 0 #f5fffa, -8.06rem 10.37rem 0 #fafaee, -107.5px 166px 0 #fafaee, -119px 10.063rem #fafaee;
+}
+b {
+	font: {
+	  family: sans-serif;
+		size: 60px;
+	}
+	color: #ECECEC;
+	text-shadow: 0 2px 3px #000;
+	position: relative;
+	display: block;
+	height: 200px; width: 200px;
+	margin: 4% auto;
+	border-radius: 50%;
+	border: 60px solid #131313;
+	box-shadow:
+	  -4px -4px 13px 0 rgba(255,255,255,0.85),
+	  2px 2px 10px 2px rgba(0,0,0,0.3),
+	  0px 0px 0 9px #DDD,
+	  0px 0px 0 10px #CCC,
+	  0px 1px 0 10px #AAA,
+	  inset 5px 5px 5px 1px rgba(0,0,0,0.2),
+	  inset 0px 0px 0px 6px #DDD,
+	  inset 0px 0px 0px 7px #CCC,
+	  inset -20px -20px 10px -5px rgba(0,0,0,0.1),
+	  inset -15px -15px 20px 5px rgba(9,86,160,0.2),
+	  inset 0px 0px 40px 15px rgba(255,255,255,0.5),
+	  0px 3px 7px 10px rgba(0,0,0,0.3);
+  
+	&:before {
+	  content: '';
+	  position: absolute; top: 0; left: 0;
+	  display: block;
+	  height: 100px; width: 100px;
+	  background: #0094DA;
+	  box-shadow: 100px 100px 0 #0094DA, 50px 50px 0 50px #eFF;
+	  z-index: -1;
+	}
+  
+	&:after {
+	  content: '';
+	  position: absolute; top: -250px; left: -200px;
+	  display: block;
+	  height: 400px; width: 400px; border-radius: 200px;
+	  background-image: radial-gradient(center center, 200px 200px, rgba(white,0.9), rgba(white,0));
+	}
+	
 }

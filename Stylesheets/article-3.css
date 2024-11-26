@@ -4,13 +4,8 @@
 
 :root{
 	/* colors */
-	--background-color:beige;
-	--text-color:#121212;
-	--Article1-primary-color:#04AA6D;
-	--Article2-primary-color:#0f17ac;
-	--article3-primary-color:#ac0f58;
-	--secondary-color:white;
-	--accent-color:rgb(142, 142, 142);
+	--article3-primary-color:#416CC2;
+
 
 
 	/* typefaces */
@@ -437,7 +432,7 @@ a:hover{
 	}
 	
 	.intro{
-		background-color:#ac0f58;
+		background-color:#416CC2;
 		color: #ffffff;
 		outline-style:solid;
 		outline-color: 2px #121212;
