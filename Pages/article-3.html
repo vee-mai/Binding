@@ -14,15 +14,23 @@
 <body>
 	<header>
 		<div class="header">
-			<span class="class-name">T & I</span>
-			<span class="project">Article 03</span>
-			<span class="my-name">Vee Mai</span>
+			<span class="short-text">T&I</span>
+			<span class="full-text">Typography & Interaction</span>
+			<span class="short-text">01</span>
+			<span class="full-text" id="strike">Intention</span>
+			<span class="short-text">VM</span>
+			<span class="full-text">Vee Mai</span>
 		</div>
 
-		<h1>Words as <span id="hover-title"><a href="https://www.nicolefenton.com/words-as-material/#:~:text=Using%20words%20as%20material%20along,right%20out%20of%20the%20mud.">Materials</a></span></h1>
+		<h1>Words as Materials</h1>
+
+		<div id="intro">
+			<h5>
+				I gave this talk at RISD in Providence and UXLx in Lisbon. Thanks to Tim Maly and Bruno Figueiredo for inviting me to speak, and to Allen Tan, Tina Lee, and Max Fenton for their thoughtful feedback on drafts.
+			</h5>
 
 		<nav class="nav-container">
-			<a href="../index.html" class="nav-item">home</a>
+			<a href="../index.html" class="nav-item">Home</a>
 			<a href="article-1.html" class="nav-item">01</a>
 			<a href="article-2.html" class="nav-item">02</a>
 			<a href="article-3.html" class="nav-item">03</a>
@@ -30,7 +38,7 @@
 	</header>
 
 	<div class="grid"> 	
-		<!-- aside -->
+		<!-- table of content -->
 			<aside>
 				<div class="sticky-aside">
 					<div class="article-info">
@@ -59,13 +67,17 @@
 				</div>
 			</aside>
 	
+	<!-- article -->
 		<article>
 			<section>
-				<div class="intro">
-					<em>I gave this talk at RISD in Providence and UXLx in Lisbon. Thanks to Tim Maly and Bruno Figueiredo for inviting me to speak, and to Allen Tan, Tina Lee, and Max Fenton for their thoughtful feedback on drafts.</em>	
-			
+				<div id="main-title">Words as Material</div>
 					<p>I want to start with a quote from writer, activist, and teacher, Thich Nhat Hanh. In Being Peace, he writes:</p>
 
+				<div class="empty-sticky"></div>
+				<div class="sticky-header" id="section1">
+					<h2>Emotional > Functional </h2>
+				</div>
+				
 				<blockquote class="quotes">
 					<p> “If you are a poet, you will see clearly that there is a cloud floating in every sheet of paper. Without a cloud, there will be no rain; without rain, the trees cannot grow; and without trees, we cannot make paper. The cloud is essential for the paper to exist.”
 					</p>

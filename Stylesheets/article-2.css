@@ -11,20 +11,20 @@ aside{
 /* animated gradientheader */
 header{
 	padding-bottom:2rem;
-	background: linear-gradient(190deg, #f5a3de, #ffd0f2, #ffffff, #f5a3de);
-	background-size: 800% 800%;
+	background: linear-gradient(190deg, #f5a3de, #ffd0f2, #ffffff, #1125db);
+	background-size: 200% 200%;
 
 	 -webkit-animation: header 6s ease infinite;
-	 animation: header 6s ease infinite;
+	 animation: unicorn 6s ease infinite;
 }
 
-@-webkit-keyframes header {
+@-webkit-keyframes unicorn {
 	0%{background-position:0% 99%}
 	50%{background-position:100% 2%}
-	 100%{background-position:0% 99%}
+	100%{background-position:0% 99%}
 }
 
-@keyframes header {
+@keyframes unicorn {
 	0%{background-position:0% 99%}
 	50%{background-position:100% 2%}
 	100%{background-position:0% 99%}
