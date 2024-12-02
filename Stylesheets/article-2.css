@@ -43,7 +43,7 @@ h1{
 }
 
 h2{
-	background-color:var(--article02-primary-color);
+	background-color:#f5a3de;
 	color:var(--text-color);
 	padding: var(--spacing-md) var(--spacing-md);
 	border-radius:var(--border-radius);
@@ -71,6 +71,17 @@ h5{
 	font-family:var(--font-family-secondary);
 }
 
+h6{
+	font-family:var(--font-family-primary);
+	font-size:4rem;
+	font-weight:bold;
+	line-height:calc(var(--font-size-h1)+0.5rem);
+	color:#121212;
+	margin-left:var(--spacing-xl);
+	margin-right:var(--spacing-xl);
+	margin-bottom:2rem;
+}
+
 p{
 	font-family:"Roboto Mono", monospace;
 	font-size:1rem;
@@ -91,12 +102,14 @@ p{
 }
 
 .empty-sticky{
-	background-color:beige;
+	background-color:#fafaee;
+	height:2.4rem;
 	position:sticky;
 	top:0;
-	z-index:auto;
+	z-index:200;
 	max-width:55rem;
 	margin: auto;
+	margin-bottom:0.5rem;
 }
 
 
@@ -154,6 +167,7 @@ p{
 	outline-style:solid;
 	outline-color:#121212;
 	border-radius:0.5rem;
+	z-index:500;
 }
 
 .nav-item {
@@ -283,11 +297,15 @@ details{
 
 .full-text { display:none;} 
 
+.bold-text{
+	font-weight:bold;
+	font-size:1.1rem;
+}
 
 
 @media (min-width:650px){
 	h1{
-		font-size:9.5rem;
+		font-size:8rem;
 		line-height:9rem;	
 	}
 	
@@ -299,9 +317,9 @@ details{
 	h1{
 		font-family: var(--font-family-primary);
 		font-size:9.5rem;
-		line-height:9rem;	
 		margin-left:3.85rem;
-		margin-bottom:4.5rem; 
+		margin-top:5rem;
+		margin-bottom:1.5rem; 
 	}
 
 	h2 {
@@ -312,6 +330,16 @@ details{
 		font-size:1rem;
 		line-height:1.8rem;
 		padding:0.5rem;
+	}
+
+	h6{
+		font-family:var(--font-family-primary);
+		font-size:3rem;
+		max-width:65rem;
+		line-height:3.8rem;
+		margin-left:3.5rem;
+		padding-left:0.5rem;
+		padding-bottom:3rem;
 	}
 
 p, blockquote {
@@ -336,39 +364,50 @@ footer{
 }
 
 /* blockquote */
-	.bigger-quote{
+
+	.boldest-quotes{
 		font-family:var(--font-family-primary);
-		font-size:3rem;
-		padding:1.5rem;
-		margin-left:4rem;
+		font-size:2rem;
+		margin-left:2rem;
+		margin-top:6rem;
+		margin-bottom:2rem;
+	}
+	.bigger-quotes{
+		font-family:var(--font-family-primary);
+		font-size:2rem;
+		line-height:3rem;
+		margin-left:2rem;
+		margin-top:2rem;
+		margin-bottom:6rem;
 	}
 
 	.big-quotes{
 		background-color:white;
 		border:2px solid #121212;
 		border-left:10px solid #121212;
-		border-radius:2rem;
+		border-radius:2.5rem;
 		padding:0.2rem;
 		border-radius:0.5rem;
-		max-width:30rem;
-		margin-left:20rem;
+		max-width:35rem;
+		margin-left:15rem;
+		margin-top:2rem;
 	}
 
 	.big-quotes:hover{
 		background-color:white;
 		border-left:10px solid #121212;
 		padding:0.2rem;
-		border-radius:0.8rem;
+		border-radius:0.5rem;
 		max-width:50rem;
 		transition:0.5s;
-		margin-top:5rem;
-		margin-bottom:5rem;
 		margin-left:10rem;
-		margin-right:5rem;
+		margin-top:2rem;
+		margin-bottom:1.5rem;
 	}
 
 	.big-quotes p{
 		font-weight:bolder;
+		padding-bottom:2rem;
 	}
 
 	cite{
@@ -377,8 +416,8 @@ footer{
 
 	.big-quotes p:hover{
 		/* transition:0.5s; */
-		font-size:2rem;
-		line-height:3rem;
+		font-size:1.5rem;
+		line-height:2.5rem;
 	}
 
 a{
@@ -472,7 +511,7 @@ h4 a:active{
 /* IDs stylings */
 	#intro{
 		font-family: "poppins", sans-serif;
-		max-width:48.5rem;
+		max-width:37rem;
 		border-radius:1rem;
 		z-index:1;
 		padding:1rem;
@@ -521,4 +560,85 @@ h4 a:active{
 	#citation{
 		font-size:0.9rem;
 	}
+
+	#gradient-box{
+		display:flex;
+		justify-content:center;
+		margin-left:3rem;
+		margin-right:3rem;
+		margin-top:5rem;
+	}
+
+	#gradient1{
+		width: 6rem;
+		height:6rem;
+		background: #F46ACD;
+	}
+
+	#gradient2{
+		width:6rem;
+		height:6rem;
+		background:#F78FDA;
+	}
+
+	  #gradient3{
+		width:6rem;
+		height:6rem;
+		background:#FAB5E6;
+	}
+
+	#gradient4{
+		width:6rem;
+		height:6rem;
+		background:#FCDAF3;
+	}
+
+	.external-link{
+		text-decoration: 2px #f5a3de underline;
+	}
+
+	.external-link:hover{
+		background-color:#f5a3de;
+	}
+
+	.boldest-text{
+		font-family:var(--font-family-secondary);
+		font-weight:bold;
+		font-size:2.5rem;
+	}
+
+	.m-highlighted-text{
+		font-family:var(--font-family-secondary);
+		font-weight:bold;
+		font-size:1.5rem;
+		background-color:#FAB5E6;
+	}
+
+	.s-highlighted-text{
+		font-family:var(--font-family-secondary);
+		font-weight:bold;
+		font-size:1.1rem;
+		background-color:#FAB5E6;
+	}
+
+	#pink{
+		text-decoration: #F46ACD wavy underline;
+	}
+
+	#purple{
+		text-decoration: #a345ea underline;
+	}
+
+	#blue{
+		text-decoration: #416CC2 wavy underline;
+	}
+
+	#caption {
+		font-family: var(--font-family-secondary);
+		color:var(--accent-color);
+		margin-left:15rem;
+		margin-bottom:3rem;
+	}
+
+
 }
