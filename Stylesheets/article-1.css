@@ -2,8 +2,8 @@
 	/* colors */
 	--article01-primary-color:#BDE662;
 }
-/* base styling */
 
+/* table of content */
 aside{
 	padding-bottom:var(--spacing-xl);
 }
@@ -13,86 +13,40 @@ header{
 	padding-bottom:2rem;
 }
 
-/* headings */
-h1{
-	font-family:var(--font-family-primary);
-	font-size:4rem;
-	font-weight:bold;
-	line-height:calc(var(--font-size-h1)+0.5rem);
-	color:#121212;
-	margin-left:var(--spacing-xl);
-	margin-right:var(--spacing-xl);
-	margin-bottom:2rem;
-}
+/* HEADINGS */
 
-h2{
-	font-family:var(--font-family-primary);
-	font-weight:bolder;
-	background-color:var(--article01-primary-color);
-	color:var(--text-color);
-	padding: var(--spacing-md) var(--spacing-md);
-	border-radius:var(--border-radius);
-	outline-style:var(--outline-style);
-	outline-color:var(--outline-color);
-}
+	/* big-article-heading */
+	h1{
+		font-family:var(--font-family-primary);
+		font-size:4rem;
+		font-weight:bold;
+		line-height:calc(var(--font-size-h1)+0.5rem);
+		color:#121212;
+		margin-left:var(--spacing-xl);
+		margin-right:var(--spacing-xl);
+		margin-bottom:2rem;
+	}
 
-h3{
-	font-family:var(--font-family-secondary);
-	font-size:var(--font-size-h3);
-	line-height:1.5rem;
-	margin-left:1.5rem;
-	margin-right:1.5rem;
-}
-
-h4{
-	font-family:var(--font-family-secondary);
-	font-size:var(--font-size-h4);
-	line-height:1.8rem;
-	margin-left:1.5rem;
-	margin-right:1.5rem;
-}
-
-h5{
-	font-family:var(--font-family-secondary);
-}
-
-p{
-	font-family:"Roboto Mono", monospace;
-	font-size:1rem;
-	line-height:1.8rem;
-	margin-left:2.25rem;
-	margin-right:2.25rem;
-	margin-top:2.5rem;
-	margin-bottom:1rem;
-}
-
-#written-by, #duration{
-	color:var(--accent-color);
-	font-size:0.9rem;
-}
+	/* section stickies header */
+	h2{
+		background-color:var(--article01-primary-color);
+		color:var(--text-color);
+		margin-top:1.5rem;
+	}
 
 /* table of content */
 .table_of_content{
 	padding-bottom:var(--spacing-lg);
 }
 
-.empty-sticky{
-	background-color:#fafaee;
-	height:2.4rem;
-	position:sticky;
-	top:0;
-	z-index:200;
-	max-width:55rem;
-	margin: auto;
-	margin-bottom:0.5rem;
-}
 
 
-.sticky-header, #section1{
-	position:sticky;
-	top:2.5rem;
-	z-index:auto;
+/* IDs */
+#written-by, #duration{
+	color:var(--accent-color);
+	font-size:0.9rem;
 }
+
 
 .article-info{
 	padding-top:1.5rem;
@@ -342,6 +296,7 @@ footer{
 		border-radius:0.5rem;
 		max-width:30rem;
 		margin-left:20rem;
+		margin-top:2rem;
 	}
 
 	.big-quotes:hover{
