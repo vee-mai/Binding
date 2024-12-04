@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 
 :root{
 	--font-family-homepage:'Space Grotesk', serif;
@@ -13,6 +17,7 @@
 
 
 /* general styles */
+
 body{
 	background-color: var(--background-color);
 	color: var(--text-color);
@@ -20,15 +25,34 @@ body{
 }
 
 h1{
-	font-size:4rem;
+	font-family:var(--font-family-homepage);
+	font-size:5rem;
 	font-weight:bold;
+	margin-left:2rem;
+	margin-top:5rem;
 }
 
 h2{
-	font-size:1.5rem;
-	max-width:35rem;
+	font-family:var(--font-family-homepage);
+	font-size:4rem;
+	margin-right:1rem;
 	font-weight:bold;
+	/* max-width:35rem; */
 }
+
+h3{
+	font-size:1rem;
+	line-height:1.8rem;
+	padding:0.5rem;
+}
+
+h4{
+	font-family:var(--font-family-homepage);
+	font-size:1.8rem;
+	margin-left:1rem;
+	margin-top:1.5rem;
+}
+
 
 nav{
 	position:sticky;
@@ -44,7 +68,30 @@ nav{
 	padding-right:1.5rem;
 }
 
-.intro{
+/* hero section */
+.header{
+	font-family:var(--font-family-primary);
+	font-size:var(--nav-font-size);
+	padding-top:2rem;
+	margin-left:2rem;
+	margin-right:2rem;
+	display:flex;
+	justify-content:space-between;
+	flex-direction:row;
+	text-transform: uppercase;
+	
+}
+
+/* top nav deskptop display */
+.short-text { display:none;}
+.full-text { display: inline-block;}
+
+#sub-title{
+	font-family:var(--font-family-homepage);
+	font-size:1.5rem;
+	margin-left:2rem;
+}
+#intro{
 	font-family:"Roboto Mono", monospace;
 	font-size:1.1rem;
 	line-height:2rem;
@@ -58,7 +105,9 @@ nav{
 }
 
 .author{
-	font-size:1rem;
+	font-size:1.2rem;
+	margin-top:-2rem;
+	margin-bottom:1rem;
 }
 .left-nav{
 	display:inline;
@@ -140,9 +189,9 @@ nav{
 	grid-row:1;
 	text-align:right;
 }
-.cardlink-item2{
+/* .cardlink-item2{
 	grid-row:2;
-}
+} */
 
 
 /* .dropdown-content a{

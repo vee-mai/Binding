@@ -239,6 +239,47 @@ details{
 	margin-bottom:3rem;
 }
 
+.box-categories {
+	padding:2rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+}
+
+.div1 { 
+	background-color:white;
+	outline: solid 2px black;
+	border-radius:0.5rem 0 0 0;
+}
+.div2 {
+	background-color:white;
+	outline: solid 2px black;
+	border-radius: 0 0.5rem 0 0;
+}
+
+.div3 {
+	background-color:white;
+	outline: solid 2px black;
+	border-radius: 0 0 0 0.5rem ;
+}
+
+.div4 {
+	background-color:white;
+	outline: solid 2px black;
+	border-radius: 0 0 0.5rem 0;
+}
+
+.four-categories{
+	font-size:3rem;
+	max-width:15rem;
+}
+
+.bold-text{
+	font-weight:bold;
+	font-size:1.1rem;
+}
 @media (min-width:770px){
 	h1{
 		font-size:9.5rem;
