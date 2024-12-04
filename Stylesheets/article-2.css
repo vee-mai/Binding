@@ -8,27 +8,27 @@ aside{
 	padding-bottom:var(--spacing-xl);
 }
 
-/* animated gradientheader */
+/* animated gradient-header */
 header{
 	padding-bottom:2rem;
-	background: linear-gradient(190deg, #f5a3de, #ffd0f2, #ffffff, #1125db);
+	background: linear-gradient(180deg, #f974d4 #f5a3de, #ffd0f2, #ffffff,);
 	background-size: 200% 200%;
-
-	 -webkit-animation: header 6s ease infinite;
-	 animation: unicorn 6s ease infinite;
+	animation: gradient-animation 6s ease infinite;
+	border-radius:0 0 2rem 2rem;
+}
+	@keyframes gradient-animation {
+		0% {
+		  background-position: 0% 50%;
+		}
+		50% {
+		  background-position: 100% 50%;
+		}
+		100% {
+		  background-position: 0% 50%;
+		}
+	}
 }
 
-@-webkit-keyframes unicorn {
-	0%{background-position:0% 99%}
-	50%{background-position:100% 2%}
-	100%{background-position:0% 99%}
-}
-
-@keyframes unicorn {
-	0%{background-position:0% 99%}
-	50%{background-position:100% 2%}
-	100%{background-position:0% 99%}
-}
 
 /* headings */
 h1{
@@ -302,6 +302,7 @@ details{
 }
 
 
+
 @media (min-width:650px){
 	h1{
 		font-size:8rem;
@@ -311,6 +312,11 @@ details{
 
 	
 @media (min-width:1280px){
+	header{
+		padding-bottom:2rem;
+		background: linear-gradient(#f974d4 #f5a3de, #ffd0f2, #ffffff,);
+		border-radius:0 0 2rem 2rem;
+	}
 
 /* heading */
 	h1{
@@ -382,9 +388,7 @@ footer{
 
 	.big-quotes{
 		background-color:white;
-		border:2px solid #121212;
-		border-left:10px solid #121212;
-		border-radius:2.5rem;
+		border-image: linear-gradient(#F5A3DE 0%, #f957cb 50%, #f326b9 100%) 2;
 		padding:0.2rem;
 		border-radius:0.5rem;
 		max-width:35rem;
@@ -637,6 +641,40 @@ h4 a:active{
 		color:var(--accent-color);
 		margin-left:15rem;
 		margin-bottom:3rem;
+	}
+
+	.quoting{
+		display:flex;
+		flex-direction:row;
+		margin-top:3rem;
+		margin-bottom:4rem;
+	}
+	
+	.author{
+		color:#121212;
+		font-size:1.2rem;
+		padding-bottom:0.5rem;
+	}
+	
+	.occupation{
+		color:var(--accent-color);
+	}
+	.text{
+		font-family: var(--font-family-primary);
+		font-size:1.2rem;
+		line-height:2rem;
+	}
+	.right-column{
+		max-width:41rem;
+	}
+	.right-column .text{
+		padding-left:2rem;
+		line-height:2rem;
+	}
+
+	.left-column{
+		line-height:4rem;
+		margin-left:1.3rem;
 	}
 
 

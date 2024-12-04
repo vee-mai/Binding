@@ -12,7 +12,7 @@
 
 	/* typefaces */
 	--font-family-primary:"Space Grotesk",serif;
-	--font-family-secondary:"Roboto Mono",monospace;
+	--font-family-secondary:"Roboto Mono",monospace; "Space Grotesk",serif;
 
 	--font-size-h1: 5rem;
 	--font-size-h2: 2rem;
