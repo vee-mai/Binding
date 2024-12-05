@@ -137,7 +137,7 @@ p{
 /* header */
 .header{
 	font-family:var(--font-family-primary);
-	font-size:var(--nav-font-size);
+	font-size:1.2rem;
 	padding-top:2rem;
 	margin-left:2rem;
 	margin-right:2rem;
@@ -294,13 +294,14 @@ details{
 	margin:2rem;
 }
 
-.full-text { display:none;} 
 
 .bold-text{
 	font-weight:bold;
 	font-size:1.1rem;
 }
 
+.short-text { display:inline;}
+.full-text{display:none;}
 
 
 @media (min-width:650px){

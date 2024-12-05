@@ -174,14 +174,13 @@ p{
 /* hero section */
 .header{
 	font-family:var(--font-family-primary);
-	font-size:var(--nav-font-size);
+	font-size:2rem;
 	padding-top:2rem;
 	margin-left:2rem;
 	margin-right:2rem;
 	display:flex;
 	justify-content:space-between;
 	flex-direction:row;
-	text-transform: uppercase;
 }
 
 /* bottom nav */
