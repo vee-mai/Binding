@@ -479,11 +479,11 @@ footer{
 			6px 6px 0px 0px #121212;
 	}
 
-	
 
 	#card1:hover{
 		background-color:#121212;
 		color:#BDE662;
+		transform:rotate(1deg);
 	}
 
 	#card2{
@@ -496,6 +496,7 @@ footer{
 	#card2:hover{
 		background-color:#121212;
 		color:#F5A3DE;
+		transform:rotate(-1deg);
 	}
 
 	#card3{
@@ -509,6 +510,7 @@ footer{
 	#card3:hover{
 		background-color:#121212;
 		color:#6ec6f9;
+		transform:rotate(2deg);
 	}
 	
 	#bubble-title{
