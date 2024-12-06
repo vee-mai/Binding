@@ -132,12 +132,6 @@ p{
 	justify-content:space-between;
 	flex-direction:row;
 }
-/* inside header */
-.project{
-	font-weight:bolder;
-	color: #04AA6D;
-	text-decoration:underline;
-}
 
 /* NAV BAR */
 .nav-container {
@@ -336,12 +330,52 @@ details{
 		  background-position: 200% center;
 		}
   }
+  .boldest-quotes{
+	font-family:var(--font-family-primary);
+	font-size:2rem;
+	margin-left:2rem;
+	margin-top:6rem;
+	margin-bottom:2rem;
+}
+
+.bigger-quotes{
+	font-family:var(--font-family-primary);
+	font-size:2rem;
+	line-height:3rem;
+	margin-left:2rem;
+	margin-top:2rem;
+	margin-bottom:6rem;
+}
+
+.big-quotes{
+	background-color:white;
+	border-image: linear-gradient(#F5A3DE 0%, #f957cb 50%, #f326b9 100%) 2;
+	padding:0.2rem;
+	border-radius:0.5rem;
+	max-width:35rem;
+	margin-left:2rem;
+	margin-top:2rem;
+}
+
+.big-quotes:hover{
+	background-color:white;
+	border-left:10px solid #121212;
+	padding:0.2rem;
+	border-radius:0.5rem;
+	max-width:50rem;
+	transition:0.5s;
+	margin-left:10rem;
+	margin-top:2rem;
+	margin-bottom:1.5rem;
+}
+
+.big-quotes p{
+	font-weight:bolder;
+	padding-bottom:2rem;
+}
 
 @media (min-width:650px){
-	h1{
-		font-size:8rem;
-		line-height:9rem;	
-	}
+}
 	
 
 	
@@ -452,7 +486,7 @@ article {
 
 footer{
 	margin-bottom:5rem;
-	margin-left:31rem;
+	/* margin-left:31rem; */
 	margin-top:5rem;
 }
 
@@ -465,6 +499,7 @@ footer{
 		margin-top:6rem;
 		margin-bottom:2rem;
 	}
+
 	.bigger-quotes{
 		font-family:var(--font-family-primary);
 		font-size:2rem;
