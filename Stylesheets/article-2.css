@@ -1,6 +1,12 @@
 :root{
 	/* colors */
 	--article02-primary-color:#F5A3DE;
+	--font-family-secondary:
+
+	/* typefaces */
+	--font-family-primary:"Space Grotesk",serif;
+	--font-family-secondary:"Roboto Mono",monospace; "Space Grotesk",serif;
+}
 
 /* base styling */
 
@@ -287,9 +293,9 @@ details{
 
 #intro{
 	background-color:#ffffff;
-	outline-style:solid;
-	outline-color: 2px #121212;
-	border-radius:0.5rem;
+	color:black;
+	outline:0.2rem solid #121212;
+	border-radius:1rem;
 	padding:1.7rem;
 	margin:2rem;
 }

@@ -5,14 +5,14 @@
 
 :root{
 	/* colors */
-	--background-color:rgb(250, 250, 238);
+	--background-color:#fafaee;
 	--text-color:#121212;
 	--secondary-color:white;
 	--accent-color:rgb(142, 142, 142);
 
 	/* typefaces */
 	--font-family-primary:"Space Grotesk",serif;
-	--font-family-secondary:"Roboto Mono",monospace; "Space Grotesk",serif;
+	--font-family-secondary:"Roboto Mono",monospace;
 
 	--font-size-h1: 5rem;
 	--font-size-h2: 2rem;
@@ -92,11 +92,12 @@ aside{
 	/* section stickies header */
 	h2{
 		font-family:var(--font-family-primary);
-		font-size:1.2rem;
+		font-size:1.4rem;
+		font-weight:800;
 		padding: var(--spacing-md) var(--spacing-md);
-		border-radius:var(--border-radius);
+		/* border-radius:var(--border-radius);
 		outline-style:var(--outline-style);
-		outline-color:var(--outline-color);
+		outline-color:var(--outline-color); */
 	}
 
 	/* more article info */
@@ -124,12 +125,22 @@ aside{
 
 /* PARAGRAPHS */
 p{
-	font-family:var(--font-family-secondary);
+	font-family:var(--font-family-primary);
+	font-size:1.1rem;
+	line-height:2rem;
+	margin:1.8rem;
+}
+
+footer{
+	padding:0.5rem;
+	/* background-color:black;
+	color:white; */
+}
+
+footer p{
+	font-family:var(--font-family-primary);
 	font-size:1rem;
-	line-height:1.8rem;
-	margin-left:2.25rem;
-	margin-right:2.25rem;
-	margin-top:2.5rem;
+
 }
 
 /* table of content card */
@@ -167,7 +178,7 @@ p{
 	/* section heading stickies */
 	.sticky-header{
 		position:sticky;
-		top:2.5rem;
+		/* top:2.5rem; */
 		z-index:200;
 	}
 
@@ -306,6 +317,7 @@ p{
 
 
 
+
 @media (min-width:660px){
 aside {
 	grid-column: 1;
@@ -370,9 +382,10 @@ h5{
 	}
 
 p{
+	font-family:var(--font-family-primary);
 	font-size:1.2rem;
 	line-height:2.2rem;
-	padding-bottom:1.5rem;
+	margin-bottom:1.5rem;
 }
 
 /* Base */
