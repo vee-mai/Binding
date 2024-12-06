@@ -1,60 +1,50 @@
 :root{
 	/* colors */
 	--article02-primary-color:#F5A3DE;
-	--font-family-secondary:
 
 	/* typefaces */
 	--font-family-primary:"Space Grotesk",serif;
 	--font-family-secondary:"Roboto Mono",monospace; "Space Grotesk",serif;
+
+	--h1-font-size:3rem;
+
+		/* spacing */
+		--spacing-xs: 0.3rem;
+		--spacing-sm: 0.5rem;
+		--spacing-md: 1rem;
+		--spacing-lg: 1.5rem;
+		--spacing-xl: 2rem;
+		--spacing-xxl: 3rem;
+
+		--border-radius-header:0 0 2rem 2rem;
+
+		--s-padding-bottom:2rem;
 }
 
 /* base styling */
-
 aside{
 	padding-bottom:var(--spacing-xl);
 }
 
-/* animated gradient-header */
+/* header background */
 header{
-	padding-bottom:2rem;
-	background: linear-gradient(180deg, #f974d4 #f5a3de, #ffd0f2, #ffffff,);
-	background-size: 200% 200%;
-	animation: gradient-animation 6s ease infinite;
-	border-radius:0 0 2rem 2rem;
-}
-	@keyframes gradient-animation {
-		0% {
-		  background-position: 0% 50%;
-		}
-		50% {
-		  background-position: 100% 50%;
-		}
-		100% {
-		  background-position: 0% 50%;
-		}
-	}
+	padding-bottom:var(--s-padding-bottom);
+	border-radius:var(--border-radius-header);
+	background-color:var(--article02-primary-color);
 }
 
-
-/* headings */
-h1{
+/* HEADINGS */
+	/* big-article-heading */
+	h1{
 	font-family:var(--font-family-primary);
-	font-size:4rem;
-	font-weight:bold;
-	line-height:calc(var(--font-size-h1)+0.5rem);
-	color:#121212;
-	margin-left:var(--spacing-xl);
-	margin-right:var(--spacing-xl);
-	margin-bottom:2rem;
+	margin-left:2rem;
 }
 
 h2{
 	background-color:#f5a3de;
 	color:var(--text-color);
 	padding: var(--spacing-md) var(--spacing-md);
-	border-radius:var(--border-radius);
-	outline-style:var(--outline-style);
-	outline-color:var(--outline-color);
+	border-bottom:0.2rem solid #121212;
 }
 
 h3{
@@ -74,27 +64,18 @@ h4{
 }
 
 h5{
-	font-family:var(--font-family-secondary);
+	font-family:var(--font-family-primary);
+	font-size:1.2rem;
+	line-height:2rem;
+
 }
 
-h6{
-	font-family:var(--font-family-primary);
-	font-size:4rem;
-	font-weight:bold;
-	line-height:calc(var(--font-size-h1)+0.5rem);
-	color:#121212;
-	margin-left:var(--spacing-xl);
-	margin-right:var(--spacing-xl);
-	margin-bottom:2rem;
-}
+
 
 p{
-	font-family:"Roboto Mono", monospace;
-	font-size:1rem;
-	line-height:1.8rem;
-	margin-left:2.25rem;
-	margin-right:2.25rem;
-	margin-top:2.5rem;
+	font-family:var(--font-family-primary);
+	font-size:1.3rem;
+	line-height:2.4rem;
 }
 
 #written-by, #duration{
@@ -121,7 +102,7 @@ p{
 
 .sticky-header, #section1{
 	position:sticky;
-	top:2.5rem;
+	top:0rem;
 	z-index:auto;
 }
 
@@ -250,6 +231,8 @@ details{
 
 }
 
+.empty-sticky{display:none;}
+
 /* next article button */
 #button {
 		font-family:var(--font-family-primary);
@@ -296,8 +279,10 @@ details{
 	color:black;
 	outline:0.2rem solid #121212;
 	border-radius:1rem;
-	padding:1.7rem;
-	margin:2rem;
+	padding:1rem;
+	margin-left:2rem;
+	margin-bottom:1rem;
+
 }
 
 
@@ -309,6 +294,48 @@ details{
 .short-text { display:inline;}
 .full-text{display:none;}
 
+#desktop-h6{
+	font-family:var(--font-family-primary);
+	font-size:1.8rem;
+	line-height:2.5rem;
+	margin-left:2rem;
+	margin-top:0.5rem;
+	font-weight:bold;
+}
+
+#gradient-box{
+	display:flex;
+	justify-content:center;
+	margin-left:1rem;
+	margin-right:1rem;
+	margin-top:2rem;
+	transform:scale(1);
+}
+
+#title-art{
+	font-family:var(--font-family-primary);
+	font-size:4.3rem;
+	line-height:12rem;
+	background: radial-gradient(
+		circle at 100%,
+		#e715dd,
+		#4d30dd 50%,
+		#0576b7 75%,
+		#5930ef 75%,
+		#e715dd 75%
+	  );
+	  font-weight: 600;
+	  background-size: 200% auto;
+	  color: #000000;
+	  background-clip: text;
+	  -webkit-text-fill-color: transparent;
+	  animation: animatedTextGradient 2s linear infinite;
+	}
+	@keyframes animatedTextGradient {
+		to {
+		  background-position: 200% center;
+		}
+  }
 
 @media (min-width:650px){
 	h1{
@@ -319,10 +346,60 @@ details{
 
 	
 @media (min-width:1280px){
+	#title-art{
+		font-family:var(--font-family-primary);
+		font-size:9.5rem;
+		line-height:12rem;
+		background: radial-gradient(
+			circle at 100%,
+			#e715dd,
+			#4d30dd 50%,
+			#0576b7 75%,
+			#5930ef 75%,
+			#e715dd 75%
+		  );
+		  font-weight: 600;
+		  background-size: 200% auto;
+		  color: #000000;
+		  background-clip: text;
+		  -webkit-text-fill-color: transparent;
+		  animation: animatedTextGradient 2s linear infinite;
+		}
+		
+		@keyframes animatedTextGradient {
+		  to {
+			background-position: 200% center;
+		  }
+	}
+
+.empty-sticky {display:block;}
+
+.empty-sticky{
+	background-color:#fafaee;
+	height:2.5rem;
+	position:sticky;
+	top:0;
+	z-index:100;
+	max-width:56rem;
+	margin-bottom:0.5rem;
+}
+
+#desktop-h6 {display:inline-block;}
+#desktop-h6{
+	font-family:var(--font-family-primary);
+	font-size:3rem;
+	line-height:3.8rem;
+	margin-left:3.5rem;
+	padding-left:0.5rem;
+	padding-bottom:3rem;
+}
+
 	header{
 		padding-bottom:2rem;
-		background: linear-gradient(#f974d4 #f5a3de, #ffd0f2, #ffffff,);
 		border-radius:0 0 2rem 2rem;
+		background-color:#f5a3de;
+	}
+	
 	}
 
 /* heading */
@@ -336,11 +413,15 @@ details{
 
 	h2 {
 		max-width:60rem;
+		border-radius:var(--border-radius);
+		outline-style:var(--outline-style);
+		outline-color:var(--outline-color);
 	}
 
 	h5{
-		font-size:1rem;
-		line-height:1.8rem;
+		font-family:var(--font-family-primary);
+		font-size:1.3rem;
+		line-height:2rem;
 		padding:0.5rem;
 	}
 
@@ -476,8 +557,10 @@ h4 a:active{
 }
 	/* top nav */
 	.header{
-		margin-bottom:4rem;
+		margin-bottom:3rem;
+		z-index:500;
 	}
+
 	/* div aside */
 	.grid {
 		display: grid;
@@ -506,6 +589,10 @@ h4 a:active{
 	.sticky-header {
 		max-width:55rem;
 		margin: auto;
+		position:sticky;
+		top:2.54rem;
+		z-index:200;
+		margin-bottom:3rem;
 	}
 
 	.highlighted-text{
@@ -520,7 +607,7 @@ h4 a:active{
 
 /* IDs stylings */
 	#intro{
-		font-family: "poppins", sans-serif;
+		font-family:var(--font-family-primary);
 		max-width:37rem;
 		border-radius:1rem;
 		z-index:1;
@@ -550,7 +637,7 @@ h4 a:active{
 		color: black; 
 		border: 2px solid #000000;
 		border-radius:0.5rem;
-		margin-left:72rem;
+		margin-left:20rem;
 	}
 
 	#button:hover {
@@ -573,10 +660,11 @@ h4 a:active{
 
 	#gradient-box{
 		display:flex;
-		justify-content:center;
+		justify-content:left;
 		margin-left:3rem;
 		margin-right:3rem;
 		margin-top:5rem;
+		transform:scale(0.3);
 	}
 
 	#gradient1{

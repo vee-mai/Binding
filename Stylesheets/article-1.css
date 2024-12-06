@@ -9,8 +9,14 @@
 
 	/* typefaces */
 	--font-family-primary:"Space Grotesk",serif;
-	--font-family-secondary:"Roboto Mono",monospace; "Space Grotesk",serif;
-	--font-accent: "Pacifico", cursive;
+	--font-family-secondary:"Roboto Mono",monospace;
+	--font-accent: "Pacifico",cursive;
+
+	--h1-font-size:3rem;
+
+	--border-radius-header:0 0 2rem 2rem;
+
+	--s-padding-bottom:2rem;
 }
 
 /* table of content */
@@ -20,7 +26,7 @@ aside{
 
 header{
 	background-color:var(--article01-primary-color);
-	padding-bottom:2rem;
+	padding-bottom:var(--border-radius-header);
 }
 
 /* HEADINGS */
@@ -99,7 +105,6 @@ footer #mobile-footer {
 	display:flex;
 	justify-content:space-between;
 	flex-direction:row;
-	text-transform: uppercase;
 }
 /* inside header */
 .project{
@@ -250,7 +255,6 @@ details{
 	font-family:var(--font-accent);
 	font-size:4rem;
 	line-height:5rem;
-	
 }
 
 /* section heading */
@@ -259,7 +263,7 @@ details{
 	margin: auto;
 	position:sticky;
 	top:0rem;
-	z-index:auto;
+	z-index:300;
 }
 
 .decorative-01 {
@@ -606,7 +610,7 @@ h4 a:active{
 
 /* IDs stylings */
 	#intro{
-		font-family: "poppins", sans-serif;
+		font-family:var(--font-family-primary);
 		max-width:48.5rem;
 		border-radius:1rem;
 		z-index:1;
