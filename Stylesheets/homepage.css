@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&display=swap');
+
 
 :root{
 	/* colors */
@@ -9,8 +11,8 @@
 	--text-color:#121212;
 
 	/* main typefaces */
-	--font-family-homepage:'Space Grotesk', serif;
-	--font-paragraph:font-family: "Roboto Mono", monospace;
+	--font-title:'Space Grotesk', serif;
+	--font-paragraph:"Roboto Mono", monospace;
 
 	/* font sizes */
 	--h1:5rem;
@@ -28,16 +30,17 @@ body{
 	margin:auto;
 }
 
+/* website-title */
 h1{
-	font-family:var(--font-family-homepage);
+	font-family:var(--font-title);
 	font-size:5rem;
 	font-weight:700;
 	margin-left:2rem;
-	margin-top:5rem;
+	margin-top:2rem;
 }
 
 h2{
-	font-family:var(--font-family-homepage);
+	font-family:var(--font-title);
 	font-size:2rem;
 	margin-right:1rem;
 	margin-top:0.5rem;
@@ -45,14 +48,21 @@ h2{
 	/* max-width:35rem; */
 }
 
+/* text inside blurb */
 h3{
-	font-size:1rem;
-	line-height:2.2rem;
-	padding:0.5rem;
+	font-family: var(--font-title);
+	font-size:1.2rem;
+	line-height:1.9rem;
 }
 
-
-
+/* cardlink details */
+h4{
+	font-family:var(--font-title);
+	font-size:2.2rem;
+	font-weight:800;
+	margin-left:1rem;
+	margin-top:1rem;
+}
 
 nav{
 	position:sticky;
@@ -68,8 +78,9 @@ nav{
 	padding-right:1.5rem;
 }
 
+/* body text */
 p{
-	font-family: var(--font-family-homepage);
+	font-family: var(--font-title);
 	font-size:1.2rem;
 	line-height:1.7rem;
 }
@@ -83,16 +94,18 @@ p:nth-child(even){
 	background-color:#121212;
 	color:white;
 	border-radius:1rem;
-	font-family:var(--font-family-primary);
+	font-family:var(--font-title);
 	font-size:1.5rem;
 	padding:1rem;
 	position:absolute;
-	left:3rem;
+	left:50%;
+	transform:translateX(-50%);
+	top:-2rem;
 }
 
-/* hero section */
+/* top-nav*/
 .header{
-	font-family:var(--font-family-homepage);
+	font-family:var(--font-title);
 	font-size:1.2rem;
 	padding-top:1.5rem;
 	padding-left:2rem;
@@ -110,30 +123,32 @@ p:nth-child(even){
 .short-text { display:none;}
 .full-text { display: inline-block;}
 
-#sub-title{
-	font-family:var(--font-family-homepage);
+.sticky-header{
+	font-family:var(--font-title);
 	font-size:3rem;
 	font-weight:800;
 	margin-left:2rem;
 	margin-bottom:1.5rem;
+	position:static;
+	top:1;
 }
+
+/* blurb in hero section */
 #intro{
-	font-family:"Roboto Mono", monospace;
-	font-size:1.1rem;
-	line-height:2rem;
 	background-color:white;
 	color:#121212;
 	outline: 0.2rem solid #121212;
 	border-radius:1rem;
 	padding:1rem;
 	margin:2rem;
+	margin-bottom:10rem;
 }
 
 .author{
 	font-size:1.5em;
-	margin-top:-2rem;
 	margin-bottom:1rem;
 }
+
 .left-nav{
 	display:inline;
 }
@@ -213,7 +228,7 @@ p:nth-child(even){
 	border-radius:1rem;
 	display:grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 2fr 3fr 1fr;
+	grid-template-rows: 2fr 1fr 1fr;
 	background-color:white;
 	padding:0.5rem;
 	height:15rem;
@@ -247,9 +262,9 @@ p:nth-child(even){
 	6px 6px 0px 0px #121212;
 }
 
-/* .cardlink-item2{
-	grid-row:2;
-} */
+.cardlink-item2{
+	height:fit-content;
+}
 
 
 /* .dropdown-content a{
@@ -273,16 +288,20 @@ p:nth-child(even){
 	}
 
 footer{
-	color:white;
-}
+		padding:1rem;
+		background-color:black;
+		color:white;
+	}
 
 #colophon{
 	background-color:white;
 	outline: solid 2px var(--text-color);
 	border-radius:1rem;
 	padding:1.3rem;
-	/* margin:2rem; */
-	margin-top:8rem;
+	padding-top:3rem;
+	margin-top:4rem;
+	margin-bottom:8rem;
+	position:relative;
 }
 
 #colophon h3{
@@ -293,7 +312,74 @@ footer{
 .short-text{display:inline-block;}
 .full-text { display:none;} 
 
-@media (min-width:950px){
+.arrow{
+	font-family:"Noto Sans Symbols 2", serif;
+	position:absolute;
+	left:20rem;
+	top:39.5rem;
+	font-size:3rem;
+	font-weight:800;
+	transform: scaleY(1);
+	display:inline-block;
+	width:5rem;
+	height:5rem;
+	background-color:#BDE662;
+	border-radius:50%;
+	transition:0.3s;
+	justify-content:center;
+	text-align:center;
+	align-items:center;
+	margin:auto;
+	padding-top:4.5px;
+}
+
+.arrow:click{
+	font-family:"Noto Sans Symbols 2", serif;
+	position:absolute;
+	left:20.5rem;
+	top:39.5rem;
+	font-size:3rem;
+	font-weight:800;
+	transform: scaleY(1);
+	display:inline-block;
+	position:absolute;
+	background-color:#BDE662;
+	border-radius:50%;
+	transform: rotate(135deg);
+}
+
+/* blue sparkly */
+.decorative-01 {
+	width: 10rem; /* adjust to control the size */
+	aspect-ratio: 1;
+	--g:/41.422% 41.422% radial-gradient(#000 calc(71% - 1px),#0000 71%) no-repeat;
+	mask: radial-gradient(100% 100%,#000 calc(20.711% - 1px),#0000 20.711%) subtract,81.262% 89.022% var(--g),10.978% 81.262% var(--g),18.738% 10.978% var(--g),89.022% 18.738% var(--g);
+	background-color:#6ec6f9;
+	position:absolute;
+	left:-2.9rem;
+	top:10rem;
+}
+
+/* pink flower */
+.decorative-02{
+	width:1.4rem; /* adjust to control the size */
+	aspect-ratio: 1;
+	--g:/23.606% 23.606% radial-gradient(#000 calc(71% - 1px),#0000 71%) no-repeat;
+	mask: 100% 50% var(--g),90.451% 79.389% var(--g),65.451% 97.553% var(--g),34.549% 97.553% var(--g),9.549% 79.389% var(--g),0% 50% var(--g),9.549% 20.611% var(--g),34.549% 2.447% var(--g),65.451% 2.447% var(--g),90.451% 20.611% var(--g),radial-gradient(100% 100%,#000 36.327%,#0000 calc(36.327% + 1px));
+	background-color:#F5A3DE;
+	position:absolute;
+	top:10.2em;
+	left:20.5rem;
+}
+
+@media (min-width:375px){
+
+	/* text inside blurb */
+h3{
+	font-family: var(--font-title);
+	font-size:1.35rem;
+	line-height:1.6rem;
+}
 
 	.cards{
 		display:grid;
@@ -302,9 +388,63 @@ footer{
 		justify-content: space-between;
 	}
 
+	.sticky-header{
+		font-family:var(--font-title);
+		font-size:rem;
+		font-weight:800;
+		margin-left:2rem;
+		margin-bottom:1.5rem;
+		position:static;
+		top:1;
+	}
+	.arrow{
+		font-family:"Noto Sans Symbols 2", serif;
+		position:absolute;
+		left:17.5rem;
+		top:42.5rem;
+		font-size:3rem;
+		font-weight:800;
+		transform: scaleY(1);
+		display:inline-block;
+		width:5rem;
+		height:5rem;
+		background-color:#BDE662;
+		border-radius:50%;
+		transition:0.3s;
+		justify-content:center;
+		text-align:center;
+		align-items:center;
+		margin:auto;
+		padding-top:4.5px;
+	}
+	
+	.arrow:click{
+		font-family:"Noto Sans Symbols 2", serif;
+		position:absolute;
+		left:17.5rem;
+		top:42.5rem;
+		font-size:3rem;
+		font-weight:800;
+		transform: scaleY(1);
+		display:inline-block;
+		position:absolute;
+		background-color:#BDE662;
+		border-radius:50%;
+		transform: rotate(135deg);
+	}
+	
+}
 
 @media (min-width:1280px){
 	
+	#colophon{
+		background-color:white;
+		outline: solid 2px var(--text-color);
+		border-radius:1rem;
+		padding:1.3rem;
+		margin-top:8rem;
+	}
+
 	body{
 		background-color:rgb(250, 250, 238);
 	}
@@ -338,7 +478,6 @@ footer{
 		font-weight:800;
 		margin-left:1rem;
 		margin-top:1rem;
-
 	}
 
 	footer{
@@ -354,42 +493,47 @@ footer{
 	}
 
 	.arrow{
+		font-family:"Noto Sans Symbols 2", serif;
 		position:absolute;
-		left:74.5rem;
-		top:36.5rem;
+		left:73.5rem;
+		top:39.5rem;
 		font-size:3rem;
 		font-weight:800;
-		transform: scaleY(-1);
+		transform: scaleY(1);
 		display:inline-block;
-		width:7rem;
-		height:7rem;
+		width:5rem;
+		height:5rem;
 		background-color:#BDE662;
 		border-radius:50%;
+		transition:0.3s;
+		justify-content:center;
+		text-align:center;
+		align-items:center;
+		margin:auto;
+		padding-top:4.5px;
 	}
 
 	.arrow:hover{
-		transform:scale(1);
+		font-family:"Noto Sans Symbols 2", serif;
 		position:absolute;
-		left:74.5rem;
-		top:36.5rem;
+		left:73.5rem;
+		top:39.5rem;
 		font-size:3rem;
 		font-weight:800;
-		transform: scaleY(-1);
+		transform: scaleY(1);
 		display:inline-block;
 		position:absolute;
-		left:72rem;
-		top:35rem;
 		background-color:#BDE662;
 		border-radius:50%;
-		transform: rotate(315deg);
+		transform: rotate(135deg);
 	}
 	
 
 	
-	#sub-title{
+	.sticky-header{
 		margin-top:7rem;
-
 	}
+
 	.intro{
 		font-family:"Roboto Mono", monospace;
 		font-size:1.1rem;
@@ -459,7 +603,6 @@ footer{
 		display:grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		gap:2rem;
-		margin-bottom:4rem;
 		padding:2rem;
 	}
 
@@ -473,6 +616,7 @@ footer{
 	}
 
 	#card1{
+		transition:0.3s;
 		background-color:#BDE662;
 		border-radius:1.5rem;
 			box-shadow: 0px 0px 0px 2px #121212,
@@ -487,6 +631,7 @@ footer{
 	}
 
 	#card2{
+		transition:0.3s;
 		background-color:#F5A3DE;
 		border-radius:1.5rem;
 		box-shadow: 0px 0px 0px 2px #121212,
@@ -500,6 +645,7 @@ footer{
 	}
 
 	#card3{
+		transition:0.3s;
 		background-color: #6ec6f9;
 		color: #121212;
 		border-radius:1.5rem;
@@ -521,7 +667,7 @@ footer{
 		font-size:1.5rem;
 		padding:1rem 2.5rem 1rem 2.5rem;
 		position:absolute;
-		left:16rem;
+		left:25rem;
 	}
 	
 	#colophon{
@@ -529,11 +675,11 @@ footer{
 		outline-style:solid;
 		outline-color:#121212;
 		border-radius:1rem;
-		margin-top:6.5rem;
-		margin-left:14rem;
-		margin-bottom:5rem;
 		padding: 4rem 3rem 1rem 3rem;
 		max-width:50rem;
+		margin:auto;
+		margin-top:8rem;
+		margin-bottom:14rem;
 	}
 
 	#intro{
@@ -548,8 +694,19 @@ footer{
 		mask: radial-gradient(100% 100%,#000 calc(20.711% - 1px),#0000 20.711%) subtract,81.262% 89.022% var(--g),10.978% 81.262% var(--g),18.738% 10.978% var(--g),89.022% 18.738% var(--g);
 		background-color:#6ec6f9;
 		position:absolute;
-		left:53rem;
-		top:32rem;
+		left:52.5rem;
+		top:31.5rem;
+	}
+
+	.decorative-09 {
+		width:14rem; /* adjust to control the size */
+		aspect-ratio: 1;
+		--g:/41.422% 41.422% radial-gradient(#000 calc(71% - 1px),#0000 71%) no-repeat;
+		mask: radial-gradient(100% 100%,#000 calc(20.711% - 1px),#0000 20.711%) subtract,81.262% 89.022% var(--g),10.978% 81.262% var(--g),18.738% 10.978% var(--g),89.022% 18.738% var(--g);
+		background-color:#BDE662;
+		position:absolute;
+		left:-12rem;
+		top:42rem;
 	}
 	
 
@@ -576,43 +733,243 @@ footer{
 		top:18rem;
 	  }
 
-	  .decorative-04{
-		width:9rem; /* adjust to control the size */
+	.decorative-04{
+		width:5rem; /* adjust to control the size */
 		aspect-ratio: 1;
 		--g:/23.606% 23.606% radial-gradient(#000 calc(71% - 1px),#0000 71%) no-repeat;
 		mask: 100% 50% var(--g),90.451% 79.389% var(--g),65.451% 97.553% var(--g),34.549% 97.553% var(--g),9.549% 79.389% var(--g),0% 50% var(--g),9.549% 20.611% var(--g),34.549% 2.447% var(--g),65.451% 2.447% var(--g),90.451% 20.611% var(--g),radial-gradient(100% 100%,#000 36.327%,#0000 calc(36.327% + 1px));
 		background-color:#F5A3DE;
 		position:absolute;
-		top:100rem;
-		left:75rem;
+		top:10rem;
+		left:-4rem;
 	}
 
 	.decorative-05 {
-		width: 17rem; /* adjust to control the size */
+		width: 12rem; /* adjust to control the size */
 		aspect-ratio: 1;
 		--g:/41.422% 41.422% radial-gradient(#000 calc(71% - 1px),#0000 71%) no-repeat;
 		mask: radial-gradient(100% 100%,#000 calc(20.711% - 1px),#0000 20.711%) subtract,81.262% 89.022% var(--g),10.978% 81.262% var(--g),18.738% 10.978% var(--g),89.022% 18.738% var(--g);
 		background-color:#6ec6f9;
 		position:absolute;
-		top:110rem;
-		left:5rem;
+		top:30rem;
+		left:50rem;
 	}
 
 	.decorative-06{
-		--s:3.5rem; /* adjust to control the size */
-		width:3.5rem; 
+		--s:2.3rem; /* adjust to control the size */
+		width:2.3rem; 
 		aspect-ratio: 1;
 		--g:/calc(var(--s)*0.247) calc(var(--s)*0.247) radial-gradient(50% 50%,#000 99%,#0000 101%) no-repeat;
 		mask: calc(50% + var(--s)*0.346) calc(50% + var(--s)*0) var(--g),calc(50% + var(--s)*0.245) calc(50% + var(--s)*0.245) var(--g),calc(50% + var(--s)*0) calc(50% + var(--s)*0.346) var(--g),calc(50% + var(--s)*-0.245) calc(50% + var(--s)*0.245) var(--g),calc(50% + var(--s)*-0.346) calc(50% + var(--s)*0) var(--g),calc(50% + var(--s)*-0.245) calc(50% + var(--s)*-0.245) var(--g),calc(50% + var(--s)*0) calc(50% + var(--s)*-0.346) var(--g),calc(50% + var(--s)*0.245) calc(50% + var(--s)*-0.245) var(--g),radial-gradient(calc(var(--s)*0.429),#000 99%,#0000 101%) subtract,calc(50% + var(--s)*0.488) calc(50% + var(--s)*0.202) var(--g),calc(50% + var(--s)*0.202) calc(50% + var(--s)*0.488) var(--g),calc(50% + var(--s)*-0.202) calc(50% + var(--s)*0.488) var(--g),calc(50% + var(--s)*-0.488) calc(50% + var(--s)*0.202) var(--g),calc(50% + var(--s)*-0.488) calc(50% + var(--s)*-0.202) var(--g),calc(50% + var(--s)*-0.202) calc(50% + var(--s)*-0.488) var(--g),calc(50% + var(--s)*0.202) calc(50% + var(--s)*-0.488) var(--g),calc(50% + var(--s)*0.488) calc(50% + var(--s)*-0.202) var(--g);
-		background-color:#BDE662;
+		background-color:#F5A3DE;
 		position:absolute;
-		left:35rem;
-		top:140rem;
+		left:44rem;
+		top:60rem;
+	}
+
+	.decorative-07{
+		--s:2.3rem; /* adjust to control the size */
+		width:2.3rem; 
+		aspect-ratio: 1;
+		--g:/calc(var(--s)*0.247) calc(var(--s)*0.247) radial-gradient(50% 50%,#000 99%,#0000 101%) no-repeat;
+		mask: calc(50% + var(--s)*0.346) calc(50% + var(--s)*0) var(--g),calc(50% + var(--s)*0.245) calc(50% + var(--s)*0.245) var(--g),calc(50% + var(--s)*0) calc(50% + var(--s)*0.346) var(--g),calc(50% + var(--s)*-0.245) calc(50% + var(--s)*0.245) var(--g),calc(50% + var(--s)*-0.346) calc(50% + var(--s)*0) var(--g),calc(50% + var(--s)*-0.245) calc(50% + var(--s)*-0.245) var(--g),calc(50% + var(--s)*0) calc(50% + var(--s)*-0.346) var(--g),calc(50% + var(--s)*0.245) calc(50% + var(--s)*-0.245) var(--g),radial-gradient(calc(var(--s)*0.429),#000 99%,#0000 101%) subtract,calc(50% + var(--s)*0.488) calc(50% + var(--s)*0.202) var(--g),calc(50% + var(--s)*0.202) calc(50% + var(--s)*0.488) var(--g),calc(50% + var(--s)*-0.202) calc(50% + var(--s)*0.488) var(--g),calc(50% + var(--s)*-0.488) calc(50% + var(--s)*0.202) var(--g),calc(50% + var(--s)*-0.488) calc(50% + var(--s)*-0.202) var(--g),calc(50% + var(--s)*-0.202) calc(50% + var(--s)*-0.488) var(--g),calc(50% + var(--s)*0.202) calc(50% + var(--s)*-0.488) var(--g),calc(50% + var(--s)*0.488) calc(50% + var(--s)*-0.202) var(--g);
+		background-color:#F5A3DE;
+		position:absolute;
+		left:48rem;
+		top:60rem;
 	  }
 
+	  .decorative-08{
+		--s:2.3rem; /* adjust to control the size */
+		width:2.3rem; 
+		aspect-ratio: 1;
+		--g:/calc(var(--s)*0.247) calc(var(--s)*0.247) radial-gradient(50% 50%,#000 99%,#0000 101%) no-repeat;
+		mask: calc(50% + var(--s)*0.346) calc(50% + var(--s)*0) var(--g),calc(50% + var(--s)*0.245) calc(50% + var(--s)*0.245) var(--g),calc(50% + var(--s)*0) calc(50% + var(--s)*0.346) var(--g),calc(50% + var(--s)*-0.245) calc(50% + var(--s)*0.245) var(--g),calc(50% + var(--s)*-0.346) calc(50% + var(--s)*0) var(--g),calc(50% + var(--s)*-0.245) calc(50% + var(--s)*-0.245) var(--g),calc(50% + var(--s)*0) calc(50% + var(--s)*-0.346) var(--g),calc(50% + var(--s)*0.245) calc(50% + var(--s)*-0.245) var(--g),radial-gradient(calc(var(--s)*0.429),#000 99%,#0000 101%) subtract,calc(50% + var(--s)*0.488) calc(50% + var(--s)*0.202) var(--g),calc(50% + var(--s)*0.202) calc(50% + var(--s)*0.488) var(--g),calc(50% + var(--s)*-0.202) calc(50% + var(--s)*0.488) var(--g),calc(50% + var(--s)*-0.488) calc(50% + var(--s)*0.202) var(--g),calc(50% + var(--s)*-0.488) calc(50% + var(--s)*-0.202) var(--g),calc(50% + var(--s)*-0.202) calc(50% + var(--s)*-0.488) var(--g),calc(50% + var(--s)*0.202) calc(50% + var(--s)*-0.488) var(--g),calc(50% + var(--s)*0.488) calc(50% + var(--s)*-0.202) var(--g);
+		background-color:#F5A3DE;
+		position:absolute;
+		left:52rem;
+		top:60rem;
+	  }
 
 .short-text { display:none;}
 .full-text { display: inline-block;}
 
+@media (min-width:1340px){
+	.arrow{
+		font-family:"Noto Sans Symbols 2", serif;
+		position:absolute;
+		left:77.5rem;
+		top:39.5rem;
+		font-size:3rem;
+		font-weight:800;
+		transform: scaleY(1);
+		display:inline-block;
+		width:5rem;
+		height:5rem;
+		background-color:#BDE662;
+		border-radius:50%;
+		transition:0.3s;
+		justify-content:center;
+		text-align:center;
+		align-items:center;
+		margin:auto;
+		padding-top:4.5px;
+	}
+
+	.arrow:hover{
+		font-family:"Noto Sans Symbols 2", serif;
+		position:absolute;
+		left:77.5rem;
+		top:39.5rem;
+		font-size:3rem;
+		font-weight:800;
+		transform: scaleY(1);
+		display:inline-block;
+		position:absolute;
+		background-color:#BDE662;
+		border-radius:50%;
+		transform: rotate(135deg);
+	}
 }
+
+@media (min-width:1440px){
+	.arrow{
+		font-family:"Noto Sans Symbols 2", serif;
+		position:absolute;
+		left:83.5rem;
+		top:39.5rem;
+		font-size:3rem;
+		font-weight:800;
+		transform: scaleY(1);
+		display:inline-block;
+		width:5rem;
+		height:5rem;
+		background-color:#BDE662;
+		border-radius:50%;
+		transition:0.3s;
+		justify-content:center;
+		text-align:center;
+		align-items:center;
+		margin:auto;
+		padding-top:4.5px;
+	}
+
+	.arrow:hover{
+		font-family:"Noto Sans Symbols 2", serif;
+		position:absolute;
+		left:83.5rem;
+		top:39.5rem;
+		font-size:3rem;
+		font-weight:800;
+		transform: scaleY(1);
+		display:inline-block;
+		position:absolute;
+		background-color:#BDE662;
+		border-radius:50%;
+		transform: rotate(135deg);
+	}
+
+.decorative-01 {
+	width: 17rem; /* adjust to control the size */
+	aspect-ratio: 1;
+	--g:/41.422% 41.422% radial-gradient(#000 calc(71% - 1px),#0000 71%) no-repeat;
+	mask: radial-gradient(100% 100%,#000 calc(20.711% - 1px),#0000 20.711%) subtract,81.262% 89.022% var(--g),10.978% 81.262% var(--g),18.738% 10.978% var(--g),89.022% 18.738% var(--g);
+	background-color:#6ec6f9;
+	position:absolute;
+	left:52.5rem;
+	top:31.5rem;
+}
+
+.decorative-09 {
+	width:14rem; /* adjust to control the size */
+	aspect-ratio: 1;
+	--g:/41.422% 41.422% radial-gradient(#000 calc(71% - 1px),#0000 71%) no-repeat;
+	mask: radial-gradient(100% 100%,#000 calc(20.711% - 1px),#0000 20.711%) subtract,81.262% 89.022% var(--g),10.978% 81.262% var(--g),18.738% 10.978% var(--g),89.022% 18.738% var(--g);
+	background-color:#BDE662;
+	position:absolute;
+	left:-12rem;
+	top:42rem;
+}
+
+
+.decorative-02{
+	width:4rem; /* adjust to control the size */
+	aspect-ratio: 1;
+	--g:/23.606% 23.606% radial-gradient(#000 calc(71% - 1px),#0000 71%) no-repeat;
+	mask: 100% 50% var(--g),90.451% 79.389% var(--g),65.451% 97.553% var(--g),34.549% 97.553% var(--g),9.549% 79.389% var(--g),0% 50% var(--g),9.549% 20.611% var(--g),34.549% 2.447% var(--g),65.451% 2.447% var(--g),90.451% 20.611% var(--g),radial-gradient(100% 100%,#000 36.327%,#0000 calc(36.327% + 1px));
+	background-color:#F5A3DE;
+	position:absolute;
+	top:24rem;
+	left:0.5rem;
+}
+
+.decorative-03{
+	--s:2rem; /* adjust to control the size */
+	width:2rem; 
+	aspect-ratio: 1;
+	--g:/calc(var(--s)*0.247) calc(var(--s)*0.247) radial-gradient(50% 50%,#000 99%,#0000 101%) no-repeat;
+	mask: calc(50% + var(--s)*0.346) calc(50% + var(--s)*0) var(--g),calc(50% + var(--s)*0.245) calc(50% + var(--s)*0.245) var(--g),calc(50% + var(--s)*0) calc(50% + var(--s)*0.346) var(--g),calc(50% + var(--s)*-0.245) calc(50% + var(--s)*0.245) var(--g),calc(50% + var(--s)*-0.346) calc(50% + var(--s)*0) var(--g),calc(50% + var(--s)*-0.245) calc(50% + var(--s)*-0.245) var(--g),calc(50% + var(--s)*0) calc(50% + var(--s)*-0.346) var(--g),calc(50% + var(--s)*0.245) calc(50% + var(--s)*-0.245) var(--g),radial-gradient(calc(var(--s)*0.429),#000 99%,#0000 101%) subtract,calc(50% + var(--s)*0.488) calc(50% + var(--s)*0.202) var(--g),calc(50% + var(--s)*0.202) calc(50% + var(--s)*0.488) var(--g),calc(50% + var(--s)*-0.202) calc(50% + var(--s)*0.488) var(--g),calc(50% + var(--s)*-0.488) calc(50% + var(--s)*0.202) var(--g),calc(50% + var(--s)*-0.488) calc(50% + var(--s)*-0.202) var(--g),calc(50% + var(--s)*-0.202) calc(50% + var(--s)*-0.488) var(--g),calc(50% + var(--s)*0.202) calc(50% + var(--s)*-0.488) var(--g),calc(50% + var(--s)*0.488) calc(50% + var(--s)*-0.202) var(--g);
+	background-color:#BDE662;
+	position:absolute;
+	left:32rem;
+	top:18rem;
+  }
+
+.decorative-04{
+	width:5rem; /* adjust to control the size */
+	aspect-ratio: 1;
+	--g:/23.606% 23.606% radial-gradient(#000 calc(71% - 1px),#0000 71%) no-repeat;
+	mask: 100% 50% var(--g),90.451% 79.389% var(--g),65.451% 97.553% var(--g),34.549% 97.553% var(--g),9.549% 79.389% var(--g),0% 50% var(--g),9.549% 20.611% var(--g),34.549% 2.447% var(--g),65.451% 2.447% var(--g),90.451% 20.611% var(--g),radial-gradient(100% 100%,#000 36.327%,#0000 calc(36.327% + 1px));
+	background-color:#F5A3DE;
+	position:absolute;
+	top:10rem;
+	left:-4rem;
+}
+
+.decorative-05 {
+	width: 12rem; /* adjust to control the size */
+	aspect-ratio: 1;
+	--g:/41.422% 41.422% radial-gradient(#000 calc(71% - 1px),#0000 71%) no-repeat;
+	mask: radial-gradient(100% 100%,#000 calc(20.711% - 1px),#0000 20.711%) subtract,81.262% 89.022% var(--g),10.978% 81.262% var(--g),18.738% 10.978% var(--g),89.022% 18.738% var(--g);
+	background-color:#6ec6f9;
+	position:absolute;
+	top:30rem;
+	left:50rem;
+}
+
+.decorative-06{
+	--s:2.3rem; /* adjust to control the size */
+	width:2.3rem; 
+	aspect-ratio: 1;
+	--g:/calc(var(--s)*0.247) calc(var(--s)*0.247) radial-gradient(50% 50%,#000 99%,#0000 101%) no-repeat;
+	mask: calc(50% + var(--s)*0.346) calc(50% + var(--s)*0) var(--g),calc(50% + var(--s)*0.245) calc(50% + var(--s)*0.245) var(--g),calc(50% + var(--s)*0) calc(50% + var(--s)*0.346) var(--g),calc(50% + var(--s)*-0.245) calc(50% + var(--s)*0.245) var(--g),calc(50% + var(--s)*-0.346) calc(50% + var(--s)*0) var(--g),calc(50% + var(--s)*-0.245) calc(50% + var(--s)*-0.245) var(--g),calc(50% + var(--s)*0) calc(50% + var(--s)*-0.346) var(--g),calc(50% + var(--s)*0.245) calc(50% + var(--s)*-0.245) var(--g),radial-gradient(calc(var(--s)*0.429),#000 99%,#0000 101%) subtract,calc(50% + var(--s)*0.488) calc(50% + var(--s)*0.202) var(--g),calc(50% + var(--s)*0.202) calc(50% + var(--s)*0.488) var(--g),calc(50% + var(--s)*-0.202) calc(50% + var(--s)*0.488) var(--g),calc(50% + var(--s)*-0.488) calc(50% + var(--s)*0.202) var(--g),calc(50% + var(--s)*-0.488) calc(50% + var(--s)*-0.202) var(--g),calc(50% + var(--s)*-0.202) calc(50% + var(--s)*-0.488) var(--g),calc(50% + var(--s)*0.202) calc(50% + var(--s)*-0.488) var(--g),calc(50% + var(--s)*0.488) calc(50% + var(--s)*-0.202) var(--g);
+	background-color:#F5A3DE;
+	position:absolute;
+	left:44rem;
+	top:60rem;
+}
+
+.decorative-07{
+	--s:2.3rem; /* adjust to control the size */
+	width:2.3rem; 
+	aspect-ratio: 1;
+	--g:/calc(var(--s)*0.247) calc(var(--s)*0.247) radial-gradient(50% 50%,#000 99%,#0000 101%) no-repeat;
+	mask: calc(50% + var(--s)*0.346) calc(50% + var(--s)*0) var(--g),calc(50% + var(--s)*0.245) calc(50% + var(--s)*0.245) var(--g),calc(50% + var(--s)*0) calc(50% + var(--s)*0.346) var(--g),calc(50% + var(--s)*-0.245) calc(50% + var(--s)*0.245) var(--g),calc(50% + var(--s)*-0.346) calc(50% + var(--s)*0) var(--g),calc(50% + var(--s)*-0.245) calc(50% + var(--s)*-0.245) var(--g),calc(50% + var(--s)*0) calc(50% + var(--s)*-0.346) var(--g),calc(50% + var(--s)*0.245) calc(50% + var(--s)*-0.245) var(--g),radial-gradient(calc(var(--s)*0.429),#000 99%,#0000 101%) subtract,calc(50% + var(--s)*0.488) calc(50% + var(--s)*0.202) var(--g),calc(50% + var(--s)*0.202) calc(50% + var(--s)*0.488) var(--g),calc(50% + var(--s)*-0.202) calc(50% + var(--s)*0.488) var(--g),calc(50% + var(--s)*-0.488) calc(50% + var(--s)*0.202) var(--g),calc(50% + var(--s)*-0.488) calc(50% + var(--s)*-0.202) var(--g),calc(50% + var(--s)*-0.202) calc(50% + var(--s)*-0.488) var(--g),calc(50% + var(--s)*0.202) calc(50% + var(--s)*-0.488) var(--g),calc(50% + var(--s)*0.488) calc(50% + var(--s)*-0.202) var(--g);
+	background-color:#F5A3DE;
+	position:absolute;
+	left:48rem;
+	top:60rem;
+  }
+
+  .decorative-08{
+	--s:2.3rem; /* adjust to control the size */
+	width:2.3rem; 
+	aspect-ratio: 1;
+	--g:/calc(var(--s)*0.247) calc(var(--s)*0.247) radial-gradient(50% 50%,#000 99%,#0000 101%) no-repeat;
+	mask: calc(50% + var(--s)*0.346) calc(50% + var(--s)*0) var(--g),calc(50% + var(--s)*0.245) calc(50% + var(--s)*0.245) var(--g),calc(50% + var(--s)*0) calc(50% + var(--s)*0.346) var(--g),calc(50% + var(--s)*-0.245) calc(50% + var(--s)*0.245) var(--g),calc(50% + var(--s)*-0.346) calc(50% + var(--s)*0) var(--g),calc(50% + var(--s)*-0.245) calc(50% + var(--s)*-0.245) var(--g),calc(50% + var(--s)*0) calc(50% + var(--s)*-0.346) var(--g),calc(50% + var(--s)*0.245) calc(50% + var(--s)*-0.245) var(--g),radial-gradient(calc(var(--s)*0.429),#000 99%,#0000 101%) subtract,calc(50% + var(--s)*0.488) calc(50% + var(--s)*0.202) var(--g),calc(50% + var(--s)*0.202) calc(50% + var(--s)*0.488) var(--g),calc(50% + var(--s)*-0.202) calc(50% + var(--s)*0.488) var(--g),calc(50% + var(--s)*-0.488) calc(50% + var(--s)*0.202) var(--g),calc(50% + var(--s)*-0.488) calc(50% + var(--s)*-0.202) var(--g),calc(50% + var(--s)*-0.202) calc(50% + var(--s)*-0.488) var(--g),calc(50% + var(--s)*0.202) calc(50% + var(--s)*-0.488) var(--g),calc(50% + var(--s)*0.488) calc(50% + var(--s)*-0.202) var(--g);
+	background-color:#F5A3DE;
+	position:absolute;
+	left:52rem;
+	top:60rem;
+  }
 }

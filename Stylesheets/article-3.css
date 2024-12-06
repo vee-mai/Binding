@@ -4,7 +4,7 @@
 
 :root{
 	/* colors */
-	--article3-primary-color:#416CC2;
+	--article3-primary-color:#6ec6f9;
 }
 
 /* top nav */
@@ -292,8 +292,7 @@ details{
 
 	/* big article heading */
 	h1{
-		color:white;
-		-webkit-text-stroke: 0.5px black;
+		color:black;
 		font-size:10rem;
 		line-height:10rem;	
 		border-bottom:2rem;
